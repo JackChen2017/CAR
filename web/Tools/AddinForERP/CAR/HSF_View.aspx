@@ -5,8 +5,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml" >
 <head runat="server">
     <title>HSF 查看/审批页面</title>
-    <link href="CSS/Style.css" type="text/css" rel="stylesheet"/>
-    <script language="javascript" type="text/javascript" src="images/JS/My97DatePicker/WdatePicker.js"></script>
+    <%--<link href="CSS/Style.css" type="text/css" rel="stylesheet"/>--%>
+    <%--<script language="javascript" type="text/javascript" src="images/JS/My97DatePicker/WdatePicker.js"></script>
     <script language="javascript" type="text/javascript">
     function ChangeCheck(me)
     {
@@ -36,7 +36,7 @@
             $["SOP_Name"].disabled = false;
         }
     }
-    </script>
+    </script>--%>
     <meta http-equiv="pragma" content="no-cache" />
     <base target="_self" />
 </head>
