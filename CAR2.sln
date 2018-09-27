@@ -1,0 +1,65 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "web", "web\", "{1040C0E8-8F34-49C4-BA69-0A28A2C2744F}"
+	ProjectSection(WebsiteProperties) = preProject
+		SccProjectName = ""$/AddIn/CAR/CARChildApproval/CAR", GPLIAAAA"
+		SccAuxPath = ""
+		SccLocalPath = ".."
+		SccProvider = "MSSCCI:Microsoft Visual SourceSafe"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv3.5"
+		Debug.AspNetCompiler.VirtualPath = "/web"
+		Debug.AspNetCompiler.PhysicalPath = "web\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\CAR\web\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/web"
+		Release.AspNetCompiler.PhysicalPath = "web\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\CAR\web\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "5299"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CAR", "CAR\CAR.csproj", "{823FD008-6C63-4FF3-8E1D-02EDAB5F244C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CARChildApproval", "CARChildApproval\CARChildApproval.csproj", "{AECFE701-C807-48BF-A24B-8D4FC3536264}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|.NET = Debug|.NET
+		Debug|Any CPU = Debug|Any CPU
+		Release|.NET = Release|.NET
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1040C0E8-8F34-49C4-BA69-0A28A2C2744F}.Debug|.NET.ActiveCfg = Debug|Any CPU
+		{1040C0E8-8F34-49C4-BA69-0A28A2C2744F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1040C0E8-8F34-49C4-BA69-0A28A2C2744F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1040C0E8-8F34-49C4-BA69-0A28A2C2744F}.Release|.NET.ActiveCfg = Debug|Any CPU
+		{1040C0E8-8F34-49C4-BA69-0A28A2C2744F}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{1040C0E8-8F34-49C4-BA69-0A28A2C2744F}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{823FD008-6C63-4FF3-8E1D-02EDAB5F244C}.Debug|.NET.ActiveCfg = Debug|Any CPU
+		{823FD008-6C63-4FF3-8E1D-02EDAB5F244C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{823FD008-6C63-4FF3-8E1D-02EDAB5F244C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{823FD008-6C63-4FF3-8E1D-02EDAB5F244C}.Release|.NET.ActiveCfg = Release|Any CPU
+		{823FD008-6C63-4FF3-8E1D-02EDAB5F244C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{823FD008-6C63-4FF3-8E1D-02EDAB5F244C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AECFE701-C807-48BF-A24B-8D4FC3536264}.Debug|.NET.ActiveCfg = Debug|Any CPU
+		{AECFE701-C807-48BF-A24B-8D4FC3536264}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AECFE701-C807-48BF-A24B-8D4FC3536264}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AECFE701-C807-48BF-A24B-8D4FC3536264}.Release|.NET.ActiveCfg = Release|Any CPU
+		{AECFE701-C807-48BF-A24B-8D4FC3536264}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AECFE701-C807-48BF-A24B-8D4FC3536264}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

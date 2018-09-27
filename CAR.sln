@@ -1,0 +1,79 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "web", "web", "{1040C0E8-8F34-49C4-BA69-0A28A2C2744F}"
+	ProjectSection(WebsiteProperties) = preProject
+		SccProjectName = ""$/AddIn/CAR/CARChildApproval/CAR", GPLIAAAA"
+		SccAuxPath = ""
+		SccLocalPath = ".."
+		SccProvider = "MSSCCI:Microsoft Visual SourceSafe"
+		TargetFramework = "3.5"
+		Debug.AspNetCompiler.VirtualPath = "/web"
+		Debug.AspNetCompiler.PhysicalPath = "web\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\CAR\web\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/web"
+		Release.AspNetCompiler.PhysicalPath = "web\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\CAR\web\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "5299"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CAR", "CAR\CAR.csproj", "{823FD008-6C63-4FF3-8E1D-02EDAB5F244C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CARChildApproval", "CARChildApproval\CARChildApproval.csproj", "{AECFE701-C807-48BF-A24B-8D4FC3536264}"
+EndProject
+Global
+	GlobalSection(SourceCodeControl) = preSolution
+		SccNumberOfProjects = 4
+		SccProjectUniqueName0 = CAR\\CAR.csproj
+		SccProjectName0 = \u0022$/AddIn/CAR/CAR\u0022,\u0020JSCDAAAA
+		SccLocalPath0 = CAR
+		SccLocalPath1 = .
+		SccProjectUniqueName2 = CARChildApproval\\CARChildApproval.csproj
+		SccLocalPath2 = .
+		SccProjectFilePathRelativizedFromConnection2 = CARChildApproval\\
+		SccWebProject3 = true
+		SccProjectUniqueName3 = web
+		SccLocalPath3 = .
+		SccProjectFilePathRelativizedFromConnection3 = web\\
+		SccProjectEnlistmentChoice3 = 2
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|.NET = Debug|.NET
+		Debug|Any CPU = Debug|Any CPU
+		Release|.NET = Release|.NET
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1040C0E8-8F34-49C4-BA69-0A28A2C2744F}.Debug|.NET.ActiveCfg = Debug|.NET
+		{1040C0E8-8F34-49C4-BA69-0A28A2C2744F}.Debug|.NET.Build.0 = Debug|.NET
+		{1040C0E8-8F34-49C4-BA69-0A28A2C2744F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1040C0E8-8F34-49C4-BA69-0A28A2C2744F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1040C0E8-8F34-49C4-BA69-0A28A2C2744F}.Release|.NET.ActiveCfg = Debug|.NET
+		{1040C0E8-8F34-49C4-BA69-0A28A2C2744F}.Release|.NET.Build.0 = Debug|.NET
+		{1040C0E8-8F34-49C4-BA69-0A28A2C2744F}.Release|Any CPU.ActiveCfg = Debug|.NET
+		{823FD008-6C63-4FF3-8E1D-02EDAB5F244C}.Debug|.NET.ActiveCfg = Debug|Any CPU
+		{823FD008-6C63-4FF3-8E1D-02EDAB5F244C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{823FD008-6C63-4FF3-8E1D-02EDAB5F244C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{823FD008-6C63-4FF3-8E1D-02EDAB5F244C}.Release|.NET.ActiveCfg = Release|Any CPU
+		{823FD008-6C63-4FF3-8E1D-02EDAB5F244C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{823FD008-6C63-4FF3-8E1D-02EDAB5F244C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AECFE701-C807-48BF-A24B-8D4FC3536264}.Debug|.NET.ActiveCfg = Debug|Any CPU
+		{AECFE701-C807-48BF-A24B-8D4FC3536264}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AECFE701-C807-48BF-A24B-8D4FC3536264}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AECFE701-C807-48BF-A24B-8D4FC3536264}.Release|.NET.ActiveCfg = Release|Any CPU
+		{AECFE701-C807-48BF-A24B-8D4FC3536264}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AECFE701-C807-48BF-A24B-8D4FC3536264}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

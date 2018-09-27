@@ -1,0 +1,90 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>中间控制页</title>
+<script type="text/javascript" language="JavaScript">
+<!--
+ 
+if (window.Event) 
+  document.captureEvents(Event.MOUSEUP); 
+ 
+function nocontextmenu() 
+{
+ event.cancelBubble = true
+ event.returnValue = false;
+ 
+ return false;
+}
+ 
+function norightclick(e) 
+{
+ if (window.Event) 
+ {
+  if (e.which == 2 || e.which == 3)
+   return false;
+ }
+ else
+  if (event.button == 2 || event.button == 3)
+  {
+   event.cancelBubble = true
+   event.returnValue = false;
+   return false;
+  }
+ 
+}
+ 
+document.oncontextmenu = nocontextmenu;  // for IE5+
+document.onmousedown = norightclick;  // for all others
+//-->
+</script>
+    
+</head>
+<body style="background-color: #6699cc;">
+
+    <script type="text/javascript">
+ var displayBar=true;
+ var saveData = '';
+ if (saveData=='')
+ {
+    saveData=window.parent.document.getElementsByTagName("frameset")[0].cols;
+ }
+ function switchBar(){
+  var   menu=window.parent.document.getElementsByTagName("frameset")[0];   
+  if (displayBar){
+        menu.cols="0,8,*"   
+        displayBar=false;
+        imgBar.src="../IMAGES/LeftNav11.gif";
+        imgBar.alt="打开左边报表菜单";
+        tToolBar.title="打开左边报表菜单";
+  }else{
+        menu.cols=saveData;
+        displayBar=true;
+        imgBar.src="../IMAGES/LeftNav10.gif";
+        imgBar.alt="关闭左边报表菜单";
+        tToolBar.title="关闭左边报表菜单";
+  }
+ }
+    </script>
+    <table id="tToolBar" style=" height: 100%; width: 100%;cursor: hand" border="0" cellpadding="0"  title="关闭左边报表菜单" onclick="switchBar()"
+        cellspacing="0">
+        <tr>
+            <td valign="middle" >
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <img id="imgBar" src="../IMAGES/LeftNav10.gif" style="cursor: hand" alt="" />
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

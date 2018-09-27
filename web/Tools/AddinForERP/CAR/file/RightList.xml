@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<RightList>
+  <VIEW id="1" index="1"></VIEW>
+  <EDIT id="2" index="2"></EDIT>
+  <BD id="3" index="3"></BD>
+  <HSF id="4" index="4"></HSF>
+  <JIAOZHENG id="5" index="5"></JIAOZHENG>
+  <QSM id="6" index="6"></QSM>
+  <SA id="7" index="7"></SA>
+</RightList>

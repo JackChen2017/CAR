@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!-- 异常单位与异常单位负责人列表配置文件 -->
+<!-- 每一个LIST代表一个公司的配置文件，list+ID ，ID的顺序与属性和Webconfig里的数据库连接串ID的顺序与属性意义一致 -->
+<configuration>
+	
+	<list1>	    
+		<item name="厂部" user="founderpcb\yangwm" />
+		<item name="生计部-计划课" user="founderpcb\yangwm"/>
+		<item name="生计部-物控课" user="founderpcb\yangwm"/>
+		<item name="制造部-微影" user="founderpcb\yangwm" />
+		<item name="制造部-防焊" user="founderpcb\yangwm" />
+		<item name="制造部-电镀" user="founderpcb\yangwm" />
+		<item name="制造部-压合" user="founderpcb\yangwm" />
+		<item name="制造部-加工" user="founderpcb\yangwm" />
+		<item name="信息中心" user="founderpcb\yangwm" />
+		<item name="工程设计" user="founderpcb\yangwm" />
+		<item name="工具制作" user="founderpcb\yangwm" />
+	</list1>
+
+	<list2>
+		<item name="工具制作2" user="founderpcb\yangwm" />
+		<item name="工程设计2" user="founderpcb\yangwm"/>
+		<item name="信息中心2" user="founderpcb\yangwm"/>
+	</list2>
+</configuration>

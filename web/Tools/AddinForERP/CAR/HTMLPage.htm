@@ -1,0 +1,52 @@
+﻿<html xml:lang="zh-CN" lang="zh-CN" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>无标题页</title>
+     <STYLE>.navPoint {
+     CURSOR: hand;
+}
+</STYLE>
+</head>
+<script>
+var status = 1;
+function switchSysBar(){
+     if (1 == window.status){
+		  window.status = 0;
+          switchPoint.innerHTML = '<img src="images/left.gif">';
+          document.all("frmTitle").style.display="none"
+     }
+     else{
+		  window.status = 1;
+          switchPoint.innerHTML = '<img src="images/right.gif">';
+          document.all("frmTitle").style.display=""
+     }
+}
+</script>
+
+
+<BODY  scroll=no style="HEIGHT: 100%;MARGIN: 1px" >
+<TABLE border=0 cellPadding=0 cellSpacing=0 height="100%" width="100%" ID="Table1">
+<TBODY>
+<TR>
+  <TD align=top id=frmTitle noWrap vAlign=top name="fmTitle" >
+  <iframe frameBorder=0 id=left name=left src="rightFrame.aspx" scrolling="no" width="120" style="HEIGHT: 100%; VISIBILITY: inherit; WIDTH: 148px; Z-INDEX: 2"></iframe>
+  </TD>
+  <TD bgColor="#337ABB" width="31">
+   <TABLE border=0 cellPadding=0 cellSpacing=0 height="100%" ID="Table2">
+    <TBODY>
+    <TR>
+     <TD onclick=switchSysBar() >      
+	 <SPAN class=navPoint id=switchPoint title="关闭/打开右栏" style="HEIGHT: 100%"><img src="images/right.gif"></SPAN>
+	 </TD>
+	</TR>
+	</TBODY>
+   </TABLE>
+  </TD>
+  <TD style="WIDTH: 100%">
+  <iframe frameBorder=0 id=frmright name=frmright scrolling=yes src="htmlpage.htm" style="HEIGHT: 100%; VISIBILITY: inherit; WIDTH: 100%; Z-INDEX: 1"></iframe>
+ 
+  </TD>
+</TR>
+</TBODY>
+</TABLE>
+</body>
+</html>

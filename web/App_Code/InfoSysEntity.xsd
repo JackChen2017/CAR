@@ -1,0 +1,1596 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="InfoSysEntity" targetNamespace="http://tempuri.org/InfoSysEntity.xsd" xmlns:mstns="http://tempuri.org/InfoSysEntity.xsd" xmlns="http://tempuri.org/InfoSysEntity.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="1" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="FIDataConnectionString" ConnectionStringObject="" IsAppSettingsProperty="True" Modifier="Assembly" Name="FIDataConnectionString (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.FIDataConnectionString.ConnectionString" Provider="System.Data.SqlClient">
+          </Connection>
+          <Connection ConnectionStringObject="Data Source=pcbweb01;Initial Catalog=FIData;Persist Security Info=True;User ID=info;Password=info@founderpcb" IsAppSettingsProperty="False" Modifier="Assembly" Name="pcbweb01.FIData.dbo" ParameterPrefix="@" Provider="System.Data.SqlClient">
+          </Connection>
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="SQLReportNameListTableAdapter" GeneratorDataComponentClassName="SQLReportNameListTableAdapter" Name="SQLReportNameList" UserDataComponentName="SQLReportNameListTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="FIDataConnectionString (Web.config)" DbObjectName="FiDataNew.dbo.SQLReportNameList" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="False" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="False" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="True">
+                    <CommandText>SELECT SQLReportID, SQLReportName, SQLReportCate, SQLReportShowURL, 
+      SQLReportBelongsTo, HitCount, SQLReportStatus, SQLReportFactory, 
+      SQLReportSortIndex, SQLReportType
+FROM SQLReportNameList</CommandText>
+                    <Parameters>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="SQLReportID" DataSetColumn="SQLReportID" />
+              <Mapping SourceColumn="SQLReportName" DataSetColumn="SQLReportName" />
+              <Mapping SourceColumn="SQLReportCate" DataSetColumn="SQLReportCate" />
+              <Mapping SourceColumn="SQLReportShowURL" DataSetColumn="SQLReportShowURL" />
+              <Mapping SourceColumn="SQLReportBelongsTo" DataSetColumn="SQLReportBelongsTo" />
+              <Mapping SourceColumn="HitCount" DataSetColumn="HitCount" />
+              <Mapping SourceColumn="SQLReportStatus" DataSetColumn="SQLReportStatus" />
+              <Mapping SourceColumn="SQLReportFactory" DataSetColumn="SQLReportFactory" />
+              <Mapping SourceColumn="SQLReportSortIndex" DataSetColumn="SQLReportSortIndex" />
+              <Mapping SourceColumn="SQLReportType" DataSetColumn="SQLReportType" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="FIDataConnectionString (Web.config)" DbObjectName="FIDataNew.dbo.SQLReportNameList" DbObjectType="View" GenerateMethods="Get" GenerateShortCommands="True" GeneratorGetMethodName="GetDataByFactoryID" GetMethodModifier="Public" GetMethodName="GetDataByFactoryID" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="True" UserGetMethodName="GetDataByFactoryID" UserSourceName="GetDataByFactoryID1">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="True">
+                    <CommandText>SELECT HitCount, SQLReportBelongsTo, SQLReportCate, SQLReportFactory, SQLReportID, SQLReportName, SQLReportShowURL, SQLReportSortIndex, SQLReportStatus, SQLReportType FROM SQLReportNameList WHERE (SQLReportFactory = @SQLReportFactory) AND (SQLReportType = @SQLReportType) ORDER BY SQLReportSortIndex, HitCount DESC</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="True" AutogeneratedName="SQLReportFactory" ColumnName="SQLReportFactory" DataSourceName="FiDataNew.dbo.SQLReportNameList" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@SQLReportFactory" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="SQLReportFactory" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="SQLReportType" ColumnName="SQLReportType" DataSourceName="FiDataNew.dbo.SQLReportNameList" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@SQLReportType" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="SQLReportType" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="FIDataConnectionString (Web.config)" DbObjectName="FiDataNew.dbo.SQLReportNameListSearchByIDList" DbObjectType="StoredProcedure" GenerateMethods="Get" GenerateShortCommands="True" GeneratorGetMethodName="GetDataByIDList" GetMethodModifier="Public" GetMethodName="GetDataByIDList" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="True" UserGetMethodName="GetDataByIDList" UserSourceName="GetDataByIDList1">
+                <SelectCommand>
+                  <DbCommand CommandType="StoredProcedure" ModifiedByUser="False">
+                    <CommandText>dbo.SQLReportNameListSearchByIDList</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@FactoryID" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@ReportIDList" Precision="0" ProviderType="NVarChar" Scale="0" Size="2000" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@SQLReportType" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="FIDataConnectionString (Web.config)" DbObjectName="FIDataNew.dbo.SQLReportNameList" DbObjectType="View" GenerateMethods="Get" GenerateShortCommands="True" GeneratorGetMethodName="GetDataByReportCate" GetMethodModifier="Public" GetMethodName="GetDataByReportCate" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="True" UserGetMethodName="GetDataByReportCate" UserSourceName="GetDataByReportCate1">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="True">
+                    <CommandText>SELECT HitCount, SQLReportBelongsTo, SQLReportCate, SQLReportFactory, SQLReportID, SQLReportName, SQLReportShowURL, SQLReportSortIndex, SQLReportStatus, SQLReportType FROM SQLReportNameList WHERE (SQLReportCate = @SQLReportCate) AND (SQLReportFactory = @FactoryID) AND (SQLReportType = @SQLReportType) ORDER BY SQLReportSortIndex, HitCount DESC</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="True" AutogeneratedName="SQLReportCate" ColumnName="SQLReportCate" DataSourceName="FiDataNew.dbo.SQLReportNameList" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@SQLReportCate" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="SQLReportCate" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="FactoryID" ColumnName="SQLReportFactory" DataSourceName="FiDataNew.dbo.SQLReportNameList" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@FactoryID" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="SQLReportFactory" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="SQLReportType" ColumnName="SQLReportType" DataSourceName="FiDataNew.dbo.SQLReportNameList" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@SQLReportType" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="SQLReportType" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="FIDataConnectionString (Web.config)" DbObjectName="FIDataNew.dbo.SQLReportNameList" DbObjectType="View" GenerateMethods="Get" GenerateShortCommands="True" GeneratorGetMethodName="GetDataByStatus" GetMethodModifier="Public" GetMethodName="GetDataByStatus" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="True" UserGetMethodName="GetDataByStatus" UserSourceName="GetDataByStatus1">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="True">
+                    <CommandText>SELECT HitCount, SQLReportBelongsTo, SQLReportCate, SQLReportFactory, SQLReportID, SQLReportName, SQLReportShowURL, SQLReportSortIndex, SQLReportStatus, SQLReportType FROM SQLReportNameList WHERE (SQLReportStatus = @SQLReportStatus) AND (SQLReportFactory = @SQLReportFactory) AND (SQLReportType = @SQLReportType) ORDER BY SQLReportSortIndex, HitCount DESC</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="True" AutogeneratedName="SQLReportStatus" ColumnName="SQLReportStatus" DataSourceName="FiDataNew.dbo.SQLReportNameList" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@SQLReportStatus" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="SQLReportStatus" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="SQLReportFactory" ColumnName="SQLReportFactory" DataSourceName="FiDataNew.dbo.SQLReportNameList" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@SQLReportFactory" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="SQLReportFactory" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="SQLReportType" ColumnName="SQLReportType" DataSourceName="FiDataNew.dbo.SQLReportNameList" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@SQLReportType" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="SQLReportType" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="SQLReportTableAdapter" GeneratorDataComponentClassName="SQLReportTableAdapter" Name="SQLReport" UserDataComponentName="SQLReportTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="FIDataConnectionString (Web.config)" DbObjectName="FIDataNew.dbo.SQLReport" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="True" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="False" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="False">
+                    <CommandText>DELETE FROM [SQLReport] WHERE (([SQLReportID] = @Original_SQLReportID))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="False" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_SQLReportID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SQLReportID" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="False">
+                    <CommandText>INSERT INTO [SQLReport] ([SQLReportName], [SQLReportType], [SQLReportFactory], [SQLReportCate], [SQLReportBelongsTo], [SQLReportSqlCommand], [SQLReportSqlWhere], [SQLReportSqlOrder], [SQLReportSpecialField], [SQLReportShowURL], [SQLReportStatus], [SQLReportComment], [SQLReportCalculateField], [SQLReportFuncCode], [SQLReportSortIndex], [SQLReportIsLimited], [Creator], [Editor], [CreateTime], [EditTime], [HitCount]) VALUES (@SQLReportName, @SQLReportType, @SQLReportFactory, @SQLReportCate, @SQLReportBelongsTo, @SQLReportSqlCommand, @SQLReportSqlWhere, @SQLReportSqlOrder, @SQLReportSpecialField, @SQLReportShowURL, @SQLReportStatus, @SQLReportComment, @SQLReportCalculateField, @SQLReportFuncCode, @SQLReportSortIndex, @SQLReportIsLimited, @Creator, @Editor, @CreateTime, @EditTime, @HitCount);
+SELECT SQLReportID, SQLReportName, SQLReportType, SQLReportFactory, SQLReportCate, SQLReportBelongsTo, SQLReportSqlCommand, SQLReportSqlWhere, SQLReportSqlOrder, SQLReportSpecialField, SQLReportShowURL, SQLReportStatus, SQLReportComment, SQLReportCalculateField, SQLReportFuncCode, SQLReportSortIndex, SQLReportIsLimited, Creator, Editor, CreateTime, EditTime, HitCount FROM SQLReport WHERE (SQLReportID = SCOPE_IDENTITY())</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="False" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@SQLReportName" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="SQLReportName" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@SQLReportType" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SQLReportType" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@SQLReportFactory" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SQLReportFactory" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@SQLReportCate" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SQLReportCate" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@SQLReportBelongsTo" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="SQLReportBelongsTo" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@SQLReportSqlCommand" Precision="0" ProviderType="Text" Scale="0" Size="0" SourceColumn="SQLReportSqlCommand" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@SQLReportSqlWhere" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="SQLReportSqlWhere" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@SQLReportSqlOrder" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="SQLReportSqlOrder" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@SQLReportSpecialField" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="SQLReportSpecialField" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@SQLReportShowURL" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="SQLReportShowURL" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@SQLReportStatus" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SQLReportStatus" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@SQLReportComment" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="SQLReportComment" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@SQLReportCalculateField" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="SQLReportCalculateField" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@SQLReportFuncCode" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SQLReportFuncCode" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@SQLReportSortIndex" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SQLReportSortIndex" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@SQLReportIsLimited" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SQLReportIsLimited" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Creator" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Creator" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Editor" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Editor" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@CreateTime" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="CreateTime" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@EditTime" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="EditTime" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@HitCount" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="HitCount" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="True">
+                    <CommandText>SELECT SQLReport.*
+FROM SQLReport</CommandText>
+                    <Parameters>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="False">
+                    <CommandText>UPDATE [SQLReport] SET [SQLReportName] = @SQLReportName, [SQLReportType] = @SQLReportType, [SQLReportFactory] = @SQLReportFactory, [SQLReportCate] = @SQLReportCate, [SQLReportBelongsTo] = @SQLReportBelongsTo, [SQLReportSqlCommand] = @SQLReportSqlCommand, [SQLReportSqlWhere] = @SQLReportSqlWhere, [SQLReportSqlOrder] = @SQLReportSqlOrder, [SQLReportSpecialField] = @SQLReportSpecialField, [SQLReportShowURL] = @SQLReportShowURL, [SQLReportStatus] = @SQLReportStatus, [SQLReportComment] = @SQLReportComment, [SQLReportCalculateField] = @SQLReportCalculateField, [SQLReportFuncCode] = @SQLReportFuncCode, [SQLReportSortIndex] = @SQLReportSortIndex, [SQLReportIsLimited] = @SQLReportIsLimited, [Creator] = @Creator, [Editor] = @Editor, [CreateTime] = @CreateTime, [EditTime] = @EditTime, [HitCount] = @HitCount WHERE (([SQLReportID] = @Original_SQLReportID));
+SELECT SQLReportID, SQLReportName, SQLReportType, SQLReportFactory, SQLReportCate, SQLReportBelongsTo, SQLReportSqlCommand, SQLReportSqlWhere, SQLReportSqlOrder, SQLReportSpecialField, SQLReportShowURL, SQLReportStatus, SQLReportComment, SQLReportCalculateField, SQLReportFuncCode, SQLReportSortIndex, SQLReportIsLimited, Creator, Editor, CreateTime, EditTime, HitCount FROM SQLReport WHERE (SQLReportID = @SQLReportID)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="False" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@SQLReportName" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="SQLReportName" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@SQLReportType" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SQLReportType" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@SQLReportFactory" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SQLReportFactory" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@SQLReportCate" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SQLReportCate" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@SQLReportBelongsTo" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="SQLReportBelongsTo" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@SQLReportSqlCommand" Precision="0" ProviderType="Text" Scale="0" Size="0" SourceColumn="SQLReportSqlCommand" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@SQLReportSqlWhere" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="SQLReportSqlWhere" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@SQLReportSqlOrder" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="SQLReportSqlOrder" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@SQLReportSpecialField" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="SQLReportSpecialField" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@SQLReportShowURL" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="SQLReportShowURL" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@SQLReportStatus" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SQLReportStatus" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@SQLReportComment" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="SQLReportComment" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@SQLReportCalculateField" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="SQLReportCalculateField" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@SQLReportFuncCode" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SQLReportFuncCode" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@SQLReportSortIndex" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SQLReportSortIndex" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@SQLReportIsLimited" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SQLReportIsLimited" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Creator" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Creator" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Editor" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Editor" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@CreateTime" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="CreateTime" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@EditTime" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="EditTime" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@HitCount" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="HitCount" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="False" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_SQLReportID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SQLReportID" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="False" AutogeneratedName="SQLReportID" ColumnName="SQLReportID" DataSourceName="FIDataNew.dbo.SQLReport" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@SQLReportID" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="SQLReportID" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="SQLReportID" DataSetColumn="SQLReportID" />
+              <Mapping SourceColumn="SQLReportName" DataSetColumn="SQLReportName" />
+              <Mapping SourceColumn="SQLReportCate" DataSetColumn="SQLReportCate" />
+              <Mapping SourceColumn="SQLReportSqlCommand" DataSetColumn="SQLReportSqlCommand" />
+              <Mapping SourceColumn="SQLReportSqlWhere" DataSetColumn="SQLReportSqlWhere" />
+              <Mapping SourceColumn="SQLReportSqlOrder" DataSetColumn="SQLReportSqlOrder" />
+              <Mapping SourceColumn="SQLReportSpecialField" DataSetColumn="SQLReportSpecialField" />
+              <Mapping SourceColumn="SQLReportStatus" DataSetColumn="SQLReportStatus" />
+              <Mapping SourceColumn="Creator" DataSetColumn="Creator" />
+              <Mapping SourceColumn="Editor" DataSetColumn="Editor" />
+              <Mapping SourceColumn="CreateTime" DataSetColumn="CreateTime" />
+              <Mapping SourceColumn="EditTime" DataSetColumn="EditTime" />
+              <Mapping SourceColumn="SQLReportShowURL" DataSetColumn="SQLReportShowURL" />
+              <Mapping SourceColumn="SQLReportComment" DataSetColumn="SQLReportComment" />
+              <Mapping SourceColumn="SQLReportBelongsTo" DataSetColumn="SQLReportBelongsTo" />
+              <Mapping SourceColumn="HitCount" DataSetColumn="HitCount" />
+              <Mapping SourceColumn="SQLReportFuncCode" DataSetColumn="SQLReportFuncCode" />
+              <Mapping SourceColumn="SQLReportCalculateField" DataSetColumn="SQLReportCalculateField" />
+              <Mapping SourceColumn="SQLReportFactory" DataSetColumn="SQLReportFactory" />
+              <Mapping SourceColumn="SQLReportSortIndex" DataSetColumn="SQLReportSortIndex" />
+              <Mapping SourceColumn="SQLReportType" DataSetColumn="SQLReportType" />
+              <Mapping SourceColumn="SQLReportIsLimited" DataSetColumn="SQLReportIsLimited" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="FIDataConnectionString (Web.config)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="True" GeneratorSourceName="DeleteQuery" Modifier="Public" Name="DeleteQuery" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="True" UserGetMethodName="GetDataBy" UserSourceName="DeleteQuery">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="True">
+                    <CommandText>DELETE SQLReport
+WHERE (SQLReportID = @SQLReportID)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="False" AutogeneratedName="SQLReportID" ColumnName="SQLReportID" DataSourceName="FIData.dbo.SQLReport" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@SQLReportID" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="SQLReportID" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+              </DbSource>
+              <DbSource ConnectionRef="FIDataConnectionString (Web.config)" DbObjectName="FiDataNew.dbo.SQLReport_SelectByID" DbObjectType="StoredProcedure" GenerateMethods="Get" GenerateShortCommands="True" GeneratorGetMethodName="GetDataByID" GetMethodModifier="Public" GetMethodName="GetDataByID" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="True" UserGetMethodName="GetDataByID" UserSourceName="GetDataByID1">
+                <SelectCommand>
+                  <DbCommand CommandType="StoredProcedure" ModifiedByUser="False">
+                    <CommandText>dbo.SQLReport_SelectByID</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@LoginUser" Precision="0" ProviderType="NVarChar" Scale="0" Size="50" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@IP" Precision="0" ProviderType="NVarChar" Scale="0" Size="50" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@SQLReportID" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="FIDataConnectionString (Web.config)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="True" GeneratorSourceName="InsertQuery" Modifier="Public" Name="InsertQuery" QueryType="Scalar" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="True" UserGetMethodName="GetDataBy1" UserSourceName="InsertQuery">
+                <InsertCommand>
+                  <DbCommand CommandType="StoredProcedure" ModifiedByUser="False">
+                    <CommandText>dbo.SQLReport_Create</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@SQLReportName" Precision="0" ProviderType="NVarChar" Scale="0" Size="100" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@SQLReportCate" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@SQLReportSqlCommand" Precision="0" ProviderType="NText" Scale="0" Size="1073741823" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@SQLReportSqlWhere" Precision="0" ProviderType="NVarChar" Scale="0" Size="1000" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@SQLReportSqlOrder" Precision="0" ProviderType="NVarChar" Scale="0" Size="1000" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@SQLReportSpecialField" Precision="0" ProviderType="NVarChar" Scale="0" Size="500" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@SQLReportShowURL" Precision="0" ProviderType="NVarChar" Scale="0" Size="3000" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@SQLReportStatus" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Creator" Precision="0" ProviderType="NVarChar" Scale="0" Size="50" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Editor" Precision="0" ProviderType="NVarChar" Scale="0" Size="50" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@CreateTime" Precision="23" ProviderType="DateTime" Scale="3" Size="8" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@EditTime" Precision="23" ProviderType="DateTime" Scale="3" Size="8" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@SQLReportComment" Precision="0" ProviderType="NVarChar" Scale="0" Size="200" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@SQLReportBelongsTo" Precision="0" ProviderType="NVarChar" Scale="0" Size="100" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@HitCount" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@SQLReportFuncCode" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@SQLReportCalculateField" Precision="0" ProviderType="NVarChar" Scale="0" Size="200" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@SQLReportFactory" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@SQLReportSortIndex" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@SQLReportType" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@SQLReportIsLimited" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+              </DbSource>
+              <DbSource ConnectionRef="FIDataConnectionString (Web.config)" DbObjectName="FIDataNew.dbo.SQLReport" DbObjectType="Table" GenerateMethods="Get" GenerateShortCommands="True" GeneratorGetMethodName="SelectByID" GeneratorSourceName="FillBy" GetMethodModifier="Public" GetMethodName="SelectByID" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="True" UserGetMethodName="SelectByID" UserSourceName="SelectByID1">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="True">
+                    <CommandText>SELECT CreateTime, Creator, EditTime, Editor, HitCount, SQLReportBelongsTo, SQLReportCalculateField, SQLReportCate, SQLReportComment, SQLReportFactory, SQLReportFuncCode, SQLReportID, SQLReportIsLimited, SQLReportName, SQLReportShowURL, SQLReportSortIndex, SQLReportSpecialField, SQLReportSqlCommand, SQLReportSqlOrder, SQLReportSqlWhere, SQLReportStatus, SQLReportType FROM SQLReport WHERE (SQLReportID = @SQLReportID)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="False" AutogeneratedName="SQLReportID" ColumnName="SQLReportID" DataSourceName="FiDataNew.dbo.SQLReport" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@SQLReportID" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="SQLReportID" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="FIDataConnectionString (Web.config)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="True" GeneratorSourceName="UpdateQuery" Modifier="Public" Name="UpdateQuery" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="True" UserGetMethodName="GetDataBy2" UserSourceName="UpdateQuery">
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="True">
+                    <CommandText>UPDATE SQLReport
+SET SQLReportName = @SQLReportName, SQLReportCate = @SQLReportCate, 
+      SQLReportSqlCommand = @SQLReportSqlCommand, 
+      SQLReportSqlWhere = @SQLReportSqlWhere, 
+      SQLReportSqlOrder = @SQLReportSqlOrder, 
+      SQLReportSpecialField = @SQLReportSpecialField, 
+      SQLReportShowURL = @SQLReportShowURL, 
+      SQLReportStatus = @SQLReportStatus, Editor = @Editor, EditTime = @EditTime, 
+      SQLReportComment = @SQLReportComment, 
+      SQLReportBelongsTo = @SQLReportBelongsTo, 
+      SQLReportFuncCode = @SQLReportFuncCode, 
+      SQLReportCalculateField = @SQLReportCalculateField, 
+      SQLReportFactory = @SQLReportFactory, 
+      SQLReportSortIndex = @SQLReportSortIndex, 
+      SQLReportIsLimited = @SQLReportIsLimited
+WHERE (SQLReportID = @SQLReportID)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="False" AutogeneratedName="SQLReportName" ColumnName="SQLReportName" DataSourceName="FiDataNew.dbo.SQLReport" DataTypeServer="nvarchar(100)" DbType="String" Direction="Input" ParameterName="@SQLReportName" Precision="0" ProviderType="NVarChar" Scale="0" Size="100" SourceColumn="SQLReportName" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="SQLReportCate" ColumnName="SQLReportCate" DataSourceName="FiDataNew.dbo.SQLReport" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@SQLReportCate" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="SQLReportCate" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="SQLReportSqlCommand" ColumnName="SQLReportSqlCommand" DataSourceName="FiDataNew.dbo.SQLReport" DataTypeServer="text" DbType="AnsiString" Direction="Input" ParameterName="@SQLReportSqlCommand" Precision="0" ProviderType="Text" Scale="0" Size="2147483647" SourceColumn="SQLReportSqlCommand" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="SQLReportSqlWhere" ColumnName="SQLReportSqlWhere" DataSourceName="FiDataNew.dbo.SQLReport" DataTypeServer="nvarchar(1000)" DbType="String" Direction="Input" ParameterName="@SQLReportSqlWhere" Precision="0" ProviderType="NVarChar" Scale="0" Size="1000" SourceColumn="SQLReportSqlWhere" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="SQLReportSqlOrder" ColumnName="SQLReportSqlOrder" DataSourceName="FiDataNew.dbo.SQLReport" DataTypeServer="nvarchar(1000)" DbType="String" Direction="Input" ParameterName="@SQLReportSqlOrder" Precision="0" ProviderType="NVarChar" Scale="0" Size="1000" SourceColumn="SQLReportSqlOrder" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="SQLReportSpecialField" ColumnName="SQLReportSpecialField" DataSourceName="FiDataNew.dbo.SQLReport" DataTypeServer="nvarchar(500)" DbType="String" Direction="Input" ParameterName="@SQLReportSpecialField" Precision="0" ProviderType="NVarChar" Scale="0" Size="500" SourceColumn="SQLReportSpecialField" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="SQLReportShowURL" ColumnName="SQLReportShowURL" DataSourceName="FiDataNew.dbo.SQLReport" DataTypeServer="nvarchar(3000)" DbType="String" Direction="Input" ParameterName="@SQLReportShowURL" Precision="0" ProviderType="NVarChar" Scale="0" Size="3000" SourceColumn="SQLReportShowURL" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="SQLReportStatus" ColumnName="SQLReportStatus" DataSourceName="FiDataNew.dbo.SQLReport" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@SQLReportStatus" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="SQLReportStatus" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="Editor" ColumnName="Editor" DataSourceName="FiDataNew.dbo.SQLReport" DataTypeServer="nvarchar(50)" DbType="String" Direction="Input" ParameterName="@Editor" Precision="0" ProviderType="NVarChar" Scale="0" Size="50" SourceColumn="Editor" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="EditTime" ColumnName="EditTime" DataSourceName="FiDataNew.dbo.SQLReport" DataTypeServer="datetime" DbType="DateTime" Direction="Input" ParameterName="@EditTime" Precision="0" ProviderType="DateTime" Scale="0" Size="8" SourceColumn="EditTime" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="SQLReportComment" ColumnName="SQLReportComment" DataSourceName="FiDataNew.dbo.SQLReport" DataTypeServer="nvarchar(200)" DbType="String" Direction="Input" ParameterName="@SQLReportComment" Precision="0" ProviderType="NVarChar" Scale="0" Size="200" SourceColumn="SQLReportComment" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="SQLReportBelongsTo" ColumnName="SQLReportBelongsTo" DataSourceName="FiDataNew.dbo.SQLReport" DataTypeServer="nvarchar(100)" DbType="String" Direction="Input" ParameterName="@SQLReportBelongsTo" Precision="0" ProviderType="NVarChar" Scale="0" Size="100" SourceColumn="SQLReportBelongsTo" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="SQLReportFuncCode" ColumnName="SQLReportFuncCode" DataSourceName="FiDataNew.dbo.SQLReport" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@SQLReportFuncCode" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="SQLReportFuncCode" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="SQLReportCalculateField" ColumnName="SQLReportCalculateField" DataSourceName="FiDataNew.dbo.SQLReport" DataTypeServer="nvarchar(200)" DbType="String" Direction="Input" ParameterName="@SQLReportCalculateField" Precision="0" ProviderType="NVarChar" Scale="0" Size="200" SourceColumn="SQLReportCalculateField" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="SQLReportFactory" ColumnName="SQLReportFactory" DataSourceName="FiDataNew.dbo.SQLReport" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@SQLReportFactory" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="SQLReportFactory" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="SQLReportSortIndex" ColumnName="SQLReportSortIndex" DataSourceName="FiDataNew.dbo.SQLReport" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@SQLReportSortIndex" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="SQLReportSortIndex" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="SQLReportIsLimited" ColumnName="SQLReportIsLimited" DataSourceName="FiDataNew.dbo.SQLReport" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@SQLReportIsLimited" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="SQLReportIsLimited" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="False" AutogeneratedName="SQLReportID" ColumnName="SQLReportID" DataSourceName="FiDataNew.dbo.SQLReport" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@SQLReportID" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="SQLReportID" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="SQLReportUserRightTableAdapter" GeneratorDataComponentClassName="SQLReportUserRightTableAdapter" Name="SQLReportUserRight" UserDataComponentName="SQLReportUserRightTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="FIDataConnectionString (Web.config)" DbObjectName="FIDataNew.dbo.SQLReportUserRight" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="True" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="False" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="False">
+                    <CommandText>DELETE FROM [SQLReportUserRight] WHERE (([SQLReportUserRightID] = @Original_SQLReportUserRightID))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="False" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_SQLReportUserRightID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SQLReportUserRightID" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="False">
+                    <CommandText>INSERT INTO [SQLReportUserRight] ([LoginUser], [LoginUserRealName], [DepartmentList], [SQLReportIDList], [RightsList], [Status], [CreateTime], [FactoryID], [DepartmentID], [EmployeeID], [UserType], [AddinIDList]) VALUES (@LoginUser, @LoginUserRealName, @DepartmentList, @SQLReportIDList, @RightsList, @Status, @CreateTime, @FactoryID, @DepartmentID, @EmployeeID, @UserType, @AddinIDList);
+SELECT SQLReportUserRightID, LoginUser, LoginUserRealName, DepartmentList, SQLReportIDList, RightsList, Status, CreateTime, FactoryID, DepartmentID, EmployeeID, UserType, AddinIDList FROM SQLReportUserRight WHERE (SQLReportUserRightID = SCOPE_IDENTITY()) ORDER BY LoginUserRealName</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="False" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@LoginUser" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="LoginUser" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@LoginUserRealName" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="LoginUserRealName" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@DepartmentList" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="DepartmentList" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@SQLReportIDList" Precision="0" ProviderType="Text" Scale="0" Size="0" SourceColumn="SQLReportIDList" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@RightsList" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="RightsList" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Status" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Status" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@CreateTime" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="CreateTime" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@FactoryID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="FactoryID" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@DepartmentID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DepartmentID" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@EmployeeID" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="EmployeeID" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@UserType" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="UserType" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@AddinIDList" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="AddinIDList" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="True">
+                    <CommandText>SELECT SQLReportUserRightID, LoginUser, LoginUserRealName, DepartmentList, 
+      SQLReportIDList, RightsList, Status, CreateTime, FactoryID, DepartmentID, 
+      EmployeeID, UserType, AddinIDList
+FROM SQLReportUserRight
+ORDER BY LoginUserRealName</CommandText>
+                    <Parameters>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="False">
+                    <CommandText>UPDATE [SQLReportUserRight] SET [LoginUser] = @LoginUser, [LoginUserRealName] = @LoginUserRealName, [DepartmentList] = @DepartmentList, [SQLReportIDList] = @SQLReportIDList, [RightsList] = @RightsList, [Status] = @Status, [CreateTime] = @CreateTime, [FactoryID] = @FactoryID, [DepartmentID] = @DepartmentID, [EmployeeID] = @EmployeeID, [UserType] = @UserType, [AddinIDList] = @AddinIDList WHERE (([SQLReportUserRightID] = @Original_SQLReportUserRightID));
+SELECT SQLReportUserRightID, LoginUser, LoginUserRealName, DepartmentList, SQLReportIDList, RightsList, Status, CreateTime, FactoryID, DepartmentID, EmployeeID, UserType, AddinIDList FROM SQLReportUserRight WHERE (SQLReportUserRightID = @SQLReportUserRightID) ORDER BY LoginUserRealName</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="False" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@LoginUser" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="LoginUser" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@LoginUserRealName" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="LoginUserRealName" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@DepartmentList" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="DepartmentList" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@SQLReportIDList" Precision="0" ProviderType="Text" Scale="0" Size="0" SourceColumn="SQLReportIDList" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@RightsList" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="RightsList" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Status" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Status" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@CreateTime" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="CreateTime" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@FactoryID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="FactoryID" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@DepartmentID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DepartmentID" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@EmployeeID" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="EmployeeID" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@UserType" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="UserType" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@AddinIDList" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="AddinIDList" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="False" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_SQLReportUserRightID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SQLReportUserRightID" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="False" AutogeneratedName="SQLReportUserRightID" ColumnName="SQLReportUserRightID" DataSourceName="FIDataNew.dbo.SQLReportUserRight" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@SQLReportUserRightID" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="SQLReportUserRightID" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="SQLReportUserRightID" DataSetColumn="SQLReportUserRightID" />
+              <Mapping SourceColumn="LoginUser" DataSetColumn="LoginUser" />
+              <Mapping SourceColumn="LoginUserRealName" DataSetColumn="LoginUserRealName" />
+              <Mapping SourceColumn="DepartmentList" DataSetColumn="DepartmentList" />
+              <Mapping SourceColumn="SQLReportIDList" DataSetColumn="SQLReportIDList" />
+              <Mapping SourceColumn="RightsList" DataSetColumn="RightsList" />
+              <Mapping SourceColumn="Status" DataSetColumn="Status" />
+              <Mapping SourceColumn="CreateTime" DataSetColumn="CreateTime" />
+              <Mapping SourceColumn="FactoryID" DataSetColumn="FactoryID" />
+              <Mapping SourceColumn="DepartmentID" DataSetColumn="DepartmentID" />
+              <Mapping SourceColumn="EmployeeID" DataSetColumn="EmployeeID" />
+              <Mapping SourceColumn="UserType" DataSetColumn="UserType" />
+              <Mapping SourceColumn="AddinIDList" DataSetColumn="AddinIDList" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="FIDataConnectionString (Web.config)" DbObjectName="FiDataNew.dbo.SQLReportUserRight_Create" DbObjectType="StoredProcedure" GenerateShortCommands="True" GeneratorSourceName="CreateNewRow" Modifier="Public" Name="CreateNewRow" QueryType="Scalar" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="True" UserGetMethodName="GetDataBy" UserSourceName="CreateNewRow">
+                <SelectCommand>
+                  <DbCommand CommandType="StoredProcedure" ModifiedByUser="False">
+                    <CommandText>dbo.SQLReportUserRight_Create</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@LoginUser" Precision="0" ProviderType="NVarChar" Scale="0" Size="50" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@LoginUserRealName" Precision="0" ProviderType="NVarChar" Scale="0" Size="50" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@DepartmentList" Precision="0" ProviderType="NVarChar" Scale="0" Size="500" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@SQLReportIDList" Precision="0" ProviderType="NVarChar" Scale="0" Size="1000" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@RightsList" Precision="0" ProviderType="NVarChar" Scale="0" Size="2000" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Status" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@FactoryID" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@DepartmentID" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@EmployeeID" Precision="0" ProviderType="NVarChar" Scale="0" Size="50" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@UserType" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@AddinIDList" Precision="0" ProviderType="NVarChar" Scale="0" Size="2000" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="FIDataConnectionString (Web.config)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="True" GeneratorSourceName="DeleteQuery" Modifier="Public" Name="DeleteQuery" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="True" UserGetMethodName="GetDataBy1" UserSourceName="DeleteQuery">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="True">
+                    <CommandText>DELETE FROM SQLReportUserRight
+WHERE (SQLReportUserRightID = @SQLReportUserRightID)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="False" AutogeneratedName="SQLReportUserRightID" ColumnName="SQLReportUserRightID" DataSourceName="FIData.dbo.SQLReportUserRight" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@SQLReportUserRightID" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="SQLReportUserRightID" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+              </DbSource>
+              <DbSource ConnectionRef="FIDataConnectionString (Web.config)" DbObjectName="FIDataNew.dbo.SQLReportUserRight" DbObjectType="Table" GenerateMethods="Get" GenerateShortCommands="True" GeneratorGetMethodName="GetDataByFactoryIDLoginUser" GetMethodModifier="Public" GetMethodName="GetDataByFactoryIDLoginUser" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="True" UserGetMethodName="GetDataByFactoryIDLoginUser" UserSourceName="GetDataByFactoryIDLoginUser1">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="True">
+                    <CommandText>SELECT SQLReportUserRightID, LoginUser, LoginUserRealName, DepartmentList, 
+      SQLReportIDList, RightsList, Status, CreateTime, FactoryID, DepartmentID, 
+      EmployeeID, UserType, AddinIDList
+FROM SQLReportUserRight
+WHERE (LoginUser = @LoginUser) AND (FactoryID = @FactoryID)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="False" AutogeneratedName="LoginUser" ColumnName="LoginUser" DataSourceName="FIDataNew.dbo.SQLReportUserRight" DataTypeServer="nvarchar(50)" DbType="String" Direction="Input" ParameterName="@LoginUser" Precision="0" ProviderType="NVarChar" Scale="0" Size="50" SourceColumn="LoginUser" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="FactoryID" ColumnName="FactoryID" DataSourceName="FIDataNew.dbo.SQLReportUserRight" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@FactoryID" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="FactoryID" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="FIDataConnectionString (Web.config)" DbObjectName="FIDataNew.dbo.SQLReportUserRight" DbObjectType="Table" GenerateMethods="Get" GenerateShortCommands="True" GeneratorGetMethodName="GetDataByID" GetMethodModifier="Public" GetMethodName="GetDataByID" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="True" UserGetMethodName="GetDataByID" UserSourceName="GetDataByID1">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="True">
+                    <CommandText>SELECT TOP 1 SQLReportUserRightID, LoginUser, FactoryID, DepartmentID, EmployeeID, 
+      UserType, AddinIDList, LoginUserRealName, DepartmentList, SQLReportIDList, 
+      RightsList, Status, CreateTime
+FROM SQLReportUserRight
+WHERE (SQLReportUserRightID = @SQLReportUserRightID)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="False" AutogeneratedName="SQLReportUserRightID" ColumnName="SQLReportUserRightID" DataSourceName="FIDataNew.dbo.SQLReportUserRight" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@SQLReportUserRightID" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="SQLReportUserRightID" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="FIDataConnectionString (Web.config)" DbObjectName="FIDataNew.dbo.SQLReportUserRight" DbObjectType="Table" GenerateMethods="Get" GenerateShortCommands="True" GeneratorGetMethodName="GetDataByLoginUser" GetMethodModifier="Public" GetMethodName="GetDataByLoginUser" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="True" UserGetMethodName="GetDataByLoginUser" UserSourceName="GetDataByLoginUser1">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="True">
+                    <CommandText>SELECT SQLReportUserRightID, LoginUser, FactoryID, DepartmentID, EmployeeID, 
+      UserType, AddinIDList, LoginUserRealName, DepartmentList, SQLReportIDList, 
+      RightsList, Status, CreateTime
+FROM SQLReportUserRight
+WHERE (LoginUser = @LoginUser)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="False" AutogeneratedName="LoginUser" ColumnName="LoginUser" DataSourceName="FIDataNew.dbo.SQLReportUserRight" DataTypeServer="nvarchar(50)" DbType="String" Direction="Input" ParameterName="@LoginUser" Precision="0" ProviderType="NVarChar" Scale="0" Size="50" SourceColumn="LoginUser" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="FIDataConnectionString (Web.config)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="True" GeneratorGetMethodName="GetDataBy1" GeneratorSourceName="UpdateQuery" Modifier="Public" Name="UpdateQuery" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="True" UserGetMethodName="GetDataBy2" UserSourceName="UpdateQuery">
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="True">
+                    <CommandText>UPDATE SQLReportUserRight
+SET LoginUser = @LoginUser, LoginUserRealName = @LoginUserRealName, 
+      DepartmentList = @DepartmentList, SQLReportIDList = @SQLReportIDList, 
+      RightsList = @RightsList, Status = @Status, FactoryID = @FactoryID, 
+      DepartmentID = @DepartmentID, EmployeeID = @EmployeeID, 
+      UserType = @UserType, AddinIDList = @AddinIDList
+WHERE (SQLReportUserRightID = @SQLReportUserRightID);      
+</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="False" AutogeneratedName="LoginUser" ColumnName="LoginUser" DataSourceName="FIDataNew.dbo.SQLReportUserRight" DataTypeServer="nvarchar(50)" DbType="String" Direction="Input" ParameterName="@LoginUser" Precision="0" ProviderType="NVarChar" Scale="0" Size="50" SourceColumn="LoginUser" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="LoginUserRealName" ColumnName="LoginUserRealName" DataSourceName="FIDataNew.dbo.SQLReportUserRight" DataTypeServer="nvarchar(50)" DbType="String" Direction="Input" ParameterName="@LoginUserRealName" Precision="0" ProviderType="NVarChar" Scale="0" Size="50" SourceColumn="LoginUserRealName" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="DepartmentList" ColumnName="DepartmentList" DataSourceName="FIDataNew.dbo.SQLReportUserRight" DataTypeServer="nvarchar(500)" DbType="String" Direction="Input" ParameterName="@DepartmentList" Precision="0" ProviderType="NVarChar" Scale="0" Size="500" SourceColumn="DepartmentList" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="SQLReportIDList" ColumnName="SQLReportIDList" DataSourceName="FIDataNew.dbo.SQLReportUserRight" DataTypeServer="text" DbType="AnsiString" Direction="Input" ParameterName="@SQLReportIDList" Precision="0" ProviderType="Text" Scale="0" Size="2147483647" SourceColumn="SQLReportIDList" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="RightsList" ColumnName="RightsList" DataSourceName="FIDataNew.dbo.SQLReportUserRight" DataTypeServer="nvarchar(2000)" DbType="String" Direction="Input" ParameterName="@RightsList" Precision="0" ProviderType="NVarChar" Scale="0" Size="2000" SourceColumn="RightsList" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="Status" ColumnName="Status" DataSourceName="FIDataNew.dbo.SQLReportUserRight" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Status" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="Status" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="FactoryID" ColumnName="FactoryID" DataSourceName="FIDataNew.dbo.SQLReportUserRight" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@FactoryID" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="FactoryID" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="DepartmentID" ColumnName="DepartmentID" DataSourceName="FIDataNew.dbo.SQLReportUserRight" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@DepartmentID" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="DepartmentID" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="EmployeeID" ColumnName="EmployeeID" DataSourceName="FIDataNew.dbo.SQLReportUserRight" DataTypeServer="nvarchar(50)" DbType="String" Direction="Input" ParameterName="@EmployeeID" Precision="0" ProviderType="NVarChar" Scale="0" Size="50" SourceColumn="EmployeeID" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="UserType" ColumnName="UserType" DataSourceName="FIDataNew.dbo.SQLReportUserRight" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@UserType" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="UserType" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="AddinIDList" ColumnName="AddinIDList" DataSourceName="FIDataNew.dbo.SQLReportUserRight" DataTypeServer="nvarchar(2000)" DbType="String" Direction="Input" ParameterName="@AddinIDList" Precision="0" ProviderType="NVarChar" Scale="0" Size="2000" SourceColumn="AddinIDList" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="False" AutogeneratedName="SQLReportUserRightID" ColumnName="SQLReportUserRightID" DataSourceName="FIDataNew.dbo.SQLReportUserRight" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@SQLReportUserRightID" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="SQLReportUserRightID" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="SQLReportUserRightViewTableAdapter" GeneratorDataComponentClassName="SQLReportUserRightViewTableAdapter" Name="SQLReportUserRightView" UserDataComponentName="SQLReportUserRightViewTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="FIDataConnectionString (Web.config)" DbObjectName="FIData.dbo.SQLReportUserRightView" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="False" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="False" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="True">
+                    <CommandText>SELECT SQLReportUserRightID, LoginUser, LoginUserRealName, DepartmentList, 
+      FactoryID, DepartmentID
+FROM SQLReportUserRightView</CommandText>
+                    <Parameters>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="SQLReportUserRightID" DataSetColumn="SQLReportUserRightID" />
+              <Mapping SourceColumn="LoginUser" DataSetColumn="LoginUser" />
+              <Mapping SourceColumn="LoginUserRealName" DataSetColumn="LoginUserRealName" />
+              <Mapping SourceColumn="DepartmentList" DataSetColumn="DepartmentList" />
+              <Mapping SourceColumn="FactoryID" DataSetColumn="FactoryID" />
+              <Mapping SourceColumn="DepartmentID" DataSetColumn="DepartmentID" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="FIDataConnectionString (Web.config)" DbObjectName="FIData.dbo.SQLReportUserRightView" DbObjectType="View" GenerateMethods="Get" GenerateShortCommands="True" GeneratorGetMethodName="GetDataByFactoryID" GetMethodModifier="Public" GetMethodName="GetDataByFactoryID" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="True" UserGetMethodName="GetDataByFactoryID" UserSourceName="GetDataByFactoryID1">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="True">
+                    <CommandText>SELECT SQLReportUserRightID, LoginUser, LoginUserRealName, DepartmentList, 
+      FactoryID, DepartmentID
+FROM SQLReportUserRightView
+WHERE (FactoryID = @FactoryID)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="True" AutogeneratedName="FactoryID" ColumnName="FactoryID" DataSourceName="FIData.dbo.SQLReportUserRightView" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@FactoryID" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="FactoryID" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="FIDataConnectionString (Web.config)" DbObjectName="FIData.dbo.SQLReportUserRightView" DbObjectType="View" GenerateMethods="Get" GenerateShortCommands="True" GeneratorGetMethodName="GetDataByFactoryIDLoginUser" GetMethodModifier="Public" GetMethodName="GetDataByFactoryIDLoginUser" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="True" UserGetMethodName="GetDataByFactoryIDLoginUser" UserSourceName="GetDataByFactoryIDLoginUser1">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="True">
+                    <CommandText>SELECT SQLReportUserRightID, LoginUser, LoginUserRealName, DepartmentList, 
+      FactoryID, DepartmentID
+FROM SQLReportUserRightView
+WHERE (LoginUser = @LoginUser) AND (FactoryID = @FactoryID)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="False" AutogeneratedName="LoginUser" ColumnName="LoginUser" DataSourceName="FIData.dbo.SQLReportUserRightView" DataTypeServer="nvarchar(50)" DbType="String" Direction="Input" ParameterName="@LoginUser" Precision="0" ProviderType="NVarChar" Scale="0" Size="50" SourceColumn="LoginUser" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="FactoryID" ColumnName="FactoryID" DataSourceName="FIData.dbo.SQLReportUserRightView" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@FactoryID" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="FactoryID" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="FIDataConnectionString (Web.config)" DbObjectName="FIData.dbo.SQLReportUserRightView" DbObjectType="View" GenerateMethods="Get" GenerateShortCommands="True" GeneratorGetMethodName="GetDataByLoginUser" GetMethodModifier="Public" GetMethodName="GetDataByLoginUser" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="True" UserGetMethodName="GetDataByLoginUser" UserSourceName="GetDataByLoginUser1">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="True">
+                    <CommandText>SELECT TOP 100 PERCENT SQLReportUserRightID, LoginUser, LoginUserRealName, 
+      DepartmentList, FactoryID, DepartmentID
+FROM SQLReportUserRightView
+WHERE (LoginUser = @LoginUser)
+ORDER BY FactoryID</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="False" AutogeneratedName="LoginUser" ColumnName="LoginUser" DataSourceName="FIData.dbo.SQLReportUserRightView" DataTypeServer="nvarchar(50)" DbType="String" Direction="Input" ParameterName="@LoginUser" Precision="0" ProviderType="NVarChar" Scale="0" Size="50" SourceColumn="LoginUser" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="SQLReportUsingHistoryTableAdapter" GeneratorDataComponentClassName="SQLReportUsingHistoryTableAdapter" Name="SQLReportUsingHistory" UserDataComponentName="SQLReportUsingHistoryTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="FIDataConnectionString (Web.config)" DbObjectName="FIData.dbo.SQLReportUsingHistory" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="True" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="True" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="False">
+                    <CommandText>DELETE FROM [dbo].[SQLReportUsingHistory] WHERE (([SQLReportUsingHistoryID] = @Original_SQLReportUsingHistoryID) AND ((@IsNull_LoginUser = 1 AND [LoginUser] IS NULL) OR ([LoginUser] = @Original_LoginUser)) AND ((@IsNull_CreateTime = 1 AND [CreateTime] IS NULL) OR ([CreateTime] = @Original_CreateTime)) AND ((@IsNull_SQLReportID = 1 AND [SQLReportID] IS NULL) OR ([SQLReportID] = @Original_SQLReportID)) AND ((@IsNull_IP = 1 AND [IP] IS NULL) OR ([IP] = @Original_IP)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="False" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_SQLReportUsingHistoryID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SQLReportUsingHistoryID" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_LoginUser" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="LoginUser" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_LoginUser" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="LoginUser" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_CreateTime" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="CreateTime" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_CreateTime" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="CreateTime" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_SQLReportID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SQLReportID" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_SQLReportID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SQLReportID" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_IP" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IP" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_IP" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="IP" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="False">
+                    <CommandText>INSERT INTO [dbo].[SQLReportUsingHistory] ([LoginUser], [CreateTime], [SQLReportID], [IP]) VALUES (@LoginUser, @CreateTime, @SQLReportID, @IP);
+SELECT SQLReportUsingHistoryID, LoginUser, CreateTime, SQLReportID, IP FROM SQLReportUsingHistory WHERE (SQLReportUsingHistoryID = SCOPE_IDENTITY())</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@LoginUser" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="LoginUser" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@CreateTime" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="CreateTime" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@SQLReportID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SQLReportID" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@IP" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="IP" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="False">
+                    <CommandText>SELECT SQLReportUsingHistoryID, LoginUser, CreateTime, SQLReportID, IP FROM dbo.SQLReportUsingHistory</CommandText>
+                    <Parameters>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="False">
+                    <CommandText>UPDATE [dbo].[SQLReportUsingHistory] SET [LoginUser] = @LoginUser, [CreateTime] = @CreateTime, [SQLReportID] = @SQLReportID, [IP] = @IP WHERE (([SQLReportUsingHistoryID] = @Original_SQLReportUsingHistoryID) AND ((@IsNull_LoginUser = 1 AND [LoginUser] IS NULL) OR ([LoginUser] = @Original_LoginUser)) AND ((@IsNull_CreateTime = 1 AND [CreateTime] IS NULL) OR ([CreateTime] = @Original_CreateTime)) AND ((@IsNull_SQLReportID = 1 AND [SQLReportID] IS NULL) OR ([SQLReportID] = @Original_SQLReportID)) AND ((@IsNull_IP = 1 AND [IP] IS NULL) OR ([IP] = @Original_IP)));
+SELECT SQLReportUsingHistoryID, LoginUser, CreateTime, SQLReportID, IP FROM SQLReportUsingHistory WHERE (SQLReportUsingHistoryID = @SQLReportUsingHistoryID)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@LoginUser" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="LoginUser" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@CreateTime" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="CreateTime" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@SQLReportID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SQLReportID" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@IP" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="IP" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="False" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_SQLReportUsingHistoryID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SQLReportUsingHistoryID" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_LoginUser" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="LoginUser" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_LoginUser" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="LoginUser" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_CreateTime" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="CreateTime" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_CreateTime" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="CreateTime" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_SQLReportID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SQLReportID" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_SQLReportID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SQLReportID" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_IP" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IP" SourceColumnNullMapping="True" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_IP" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="IP" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="False" AutogeneratedName="SQLReportUsingHistoryID" ColumnName="SQLReportUsingHistoryID" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@SQLReportUsingHistoryID" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="SQLReportUsingHistoryID" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="SQLReportUsingHistoryID" DataSetColumn="SQLReportUsingHistoryID" />
+              <Mapping SourceColumn="LoginUser" DataSetColumn="LoginUser" />
+              <Mapping SourceColumn="CreateTime" DataSetColumn="CreateTime" />
+              <Mapping SourceColumn="SQLReportID" DataSetColumn="SQLReportID" />
+              <Mapping SourceColumn="IP" DataSetColumn="IP" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="FIDataConnectionString (Web.config)" DbObjectName="FIData.dbo.SQLReportUsingHistory_Create" DbObjectType="StoredProcedure" GenerateShortCommands="True" GeneratorSourceName="InsertQuery" Modifier="Public" Name="InsertQuery" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="True" UserGetMethodName="GetDataBy" UserSourceName="InsertQuery">
+                <SelectCommand>
+                  <DbCommand CommandType="StoredProcedure" ModifiedByUser="False">
+                    <CommandText>dbo.SQLReportUsingHistory_Create</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@LoginUser" Precision="0" ProviderType="NVarChar" Scale="0" Size="50" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@IP" Precision="0" ProviderType="NVarChar" Scale="0" Size="50" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@SQLReportID" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="SQLReportUsingHistoryViewTableAdapter" GeneratorDataComponentClassName="SQLReportUsingHistoryViewTableAdapter" Name="SQLReportUsingHistoryView" UserDataComponentName="SQLReportUsingHistoryViewTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="FIDataConnectionString (Web.config)" DbObjectName="FiDataNew.dbo.SQLReportUsingHistoryView" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="False" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="False" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="True">
+                    <CommandText>SELECT LoginUser, LoginUserRealName, IP, SQLReportID, SQLReportName, CreateTime, HitNum, SQLReportFactory, SQLReportType FROM SQLReportUsingHistoryView</CommandText>
+                    <Parameters>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="LoginUser" DataSetColumn="LoginUser" />
+              <Mapping SourceColumn="LoginUserRealName" DataSetColumn="LoginUserRealName" />
+              <Mapping SourceColumn="IP" DataSetColumn="IP" />
+              <Mapping SourceColumn="SQLReportID" DataSetColumn="SQLReportID" />
+              <Mapping SourceColumn="SQLReportName" DataSetColumn="SQLReportName" />
+              <Mapping SourceColumn="CreateTime" DataSetColumn="CreateTime" />
+              <Mapping SourceColumn="HitNum" DataSetColumn="HitNum" />
+              <Mapping SourceColumn="SQLReportFactory" DataSetColumn="SQLReportFactory" />
+              <Mapping SourceColumn="SQLReportType" DataSetColumn="SQLReportType" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="FIDataConnectionString (Web.config)" DbObjectName="FiDataNew.dbo.SQLReportUsingHistoryView" DbObjectType="View" GenerateMethods="Get" GenerateShortCommands="True" GeneratorGetMethodName="GetDetailDataByReportID" GetMethodModifier="Public" GetMethodName="GetDetailDataByReportID" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="True" UserGetMethodName="GetDetailDataByReportID" UserSourceName="GetDetailDataByReportID1">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="True">
+                    <CommandText>SELECT CreateTime, HitNum, IP, LoginUser, LoginUserRealName, SQLReportFactory, SQLReportID, SQLReportName, SQLReportType FROM SQLReportUsingHistoryView WHERE (SQLReportID = @SQLReportID) ORDER BY CreateTime DESC</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="True" AutogeneratedName="SQLReportID" ColumnName="SQLReportID" DataSourceName="FiDataNew.dbo.SQLReportUsingHistoryView" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@SQLReportID" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="SQLReportID" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="FIDataConnectionString (Web.config)" DbObjectName="FiDataNew.dbo.SQLReportUsingHistoryView" DbObjectType="View" GenerateMethods="Get" GenerateShortCommands="True" GeneratorGetMethodName="GetPeronalSumData" GeneratorSourceName="FillBy2" GetMethodModifier="Public" GetMethodName="GetPeronalSumData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="True" UserGetMethodName="GetPeronalSumData" UserSourceName="GetPeronalSumData1">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="True">
+                    <CommandText>SELECT LoginUser, LoginUserRealName, IP, SQLReportID, SQLReportName, CreateTime, SUM(HitNum) AS HitNum, SQLReportFactory, SQLReportType FROM SQLReportUsingHistoryView WHERE (LoginUser = @LoginUser) OR (LoginUserRealName = @LoginUser) GROUP BY LoginUser, LoginUserRealName, IP, SQLReportID, SQLReportName, CreateTime, SQLReportFactory, SQLReportType ORDER BY CreateTime DESC, SQLReportName, HitNum DESC, LoginUser </CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="True" AutogeneratedName="LoginUser" ColumnName="LoginUser" DataSourceName="FiDataNew.dbo.SQLReportUsingHistoryView" DataTypeServer="nvarchar(50)" DbType="String" Direction="Input" ParameterName="@LoginUser" Precision="0" ProviderType="NVarChar" Scale="0" Size="50" SourceColumn="LoginUser" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="FIDataConnectionString (Web.config)" DbObjectName="FiDataNew.dbo.SQLReportUsingHistoryView" DbObjectType="View" GenerateMethods="Get" GenerateShortCommands="True" GeneratorGetMethodName="GetSumDataByReportID" GetMethodModifier="Public" GetMethodName="GetSumDataByReportID" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="True" UserGetMethodName="GetSumDataByReportID" UserSourceName="GetSumDataByReportID1">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="True">
+                    <CommandText>SELECT LoginUser, LoginUserRealName, IP, SQLReportID, SQLReportName, CreateTime, SUM(HitNum) AS HitNum, SQLReportFactory, SQLReportType FROM SQLReportUsingHistoryView WHERE (SQLReportID = @SQLReportID) GROUP BY LoginUser, LoginUserRealName, IP, SQLReportID, SQLReportName, CreateTime, SQLReportFactory, SQLReportType ORDER BY CreateTime DESC, HitNum DESC</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="True" AutogeneratedName="SQLReportID" ColumnName="SQLReportID" DataSourceName="FiDataNew.dbo.SQLReportUsingHistoryView" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@SQLReportID" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="SQLReportID" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="SQLReportFileTableAdapter" GeneratorDataComponentClassName="SQLReportFileTableAdapter" Name="SQLReportFile" UserDataComponentName="SQLReportFileTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="FIDataConnectionString (Web.config)" DbObjectName="FiDataNew.dbo.SQLReportFile" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="True" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="False" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="False">
+                    <CommandText>DELETE FROM [SQLReportFile] WHERE (([SQLReportFileID] = @Original_SQLReportFileID))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="False" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_SQLReportFileID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SQLReportFileID" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="False">
+                    <CommandText>INSERT INTO [SQLReportFile] ([SQLReportFileName], [SQLReportFileExtend], [SQLReportFilePath], [SQLReportFileUploadUser], [SQLReportFileComment], [CreateTime], [UpdateTime], [SQLReportID]) VALUES (@SQLReportFileName, @SQLReportFileExtend, @SQLReportFilePath, @SQLReportFileUploadUser, @SQLReportFileComment, @CreateTime, @UpdateTime, @SQLReportID);
+SELECT SQLReportFileID, SQLReportFileName, SQLReportFileExtend, SQLReportFilePath, SQLReportFileUploadUser, SQLReportFileComment, CreateTime, UpdateTime, SQLReportID FROM SQLReportFile WHERE (SQLReportFileID = SCOPE_IDENTITY())</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@SQLReportFileName" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="SQLReportFileName" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@SQLReportFileExtend" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="SQLReportFileExtend" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@SQLReportFilePath" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="SQLReportFilePath" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@SQLReportFileUploadUser" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="SQLReportFileUploadUser" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@SQLReportFileComment" Precision="0" ProviderType="Text" Scale="0" Size="0" SourceColumn="SQLReportFileComment" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@CreateTime" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="CreateTime" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@UpdateTime" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="UpdateTime" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@SQLReportID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SQLReportID" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="True">
+                    <CommandText>SELECT SQLReportFileID, SQLReportFileName, SQLReportFileExtend, SQLReportFilePath, SQLReportFileUploadUser, SQLReportFileComment, CreateTime, UpdateTime, SQLReportID FROM SQLReportFile</CommandText>
+                    <Parameters>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="False">
+                    <CommandText>UPDATE [SQLReportFile] SET [SQLReportFileName] = @SQLReportFileName, [SQLReportFileExtend] = @SQLReportFileExtend, [SQLReportFilePath] = @SQLReportFilePath, [SQLReportFileUploadUser] = @SQLReportFileUploadUser, [SQLReportFileComment] = @SQLReportFileComment, [CreateTime] = @CreateTime, [UpdateTime] = @UpdateTime, [SQLReportID] = @SQLReportID WHERE (([SQLReportFileID] = @Original_SQLReportFileID));
+SELECT SQLReportFileID, SQLReportFileName, SQLReportFileExtend, SQLReportFilePath, SQLReportFileUploadUser, SQLReportFileComment, CreateTime, UpdateTime, SQLReportID FROM SQLReportFile WHERE (SQLReportFileID = @SQLReportFileID)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@SQLReportFileName" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="SQLReportFileName" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@SQLReportFileExtend" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="SQLReportFileExtend" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@SQLReportFilePath" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="SQLReportFilePath" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@SQLReportFileUploadUser" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="SQLReportFileUploadUser" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@SQLReportFileComment" Precision="0" ProviderType="Text" Scale="0" Size="0" SourceColumn="SQLReportFileComment" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@CreateTime" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="CreateTime" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@UpdateTime" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="UpdateTime" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@SQLReportID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SQLReportID" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="False" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_SQLReportFileID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SQLReportFileID" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="False" AutogeneratedName="SQLReportFileID" ColumnName="SQLReportFileID" DataSourceName="FiDataNew.dbo.SQLReportFile" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@SQLReportFileID" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="SQLReportFileID" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="SQLReportFileID" DataSetColumn="SQLReportFileID" />
+              <Mapping SourceColumn="SQLReportFileName" DataSetColumn="SQLReportFileName" />
+              <Mapping SourceColumn="SQLReportFileExtend" DataSetColumn="SQLReportFileExtend" />
+              <Mapping SourceColumn="SQLReportFilePath" DataSetColumn="SQLReportFilePath" />
+              <Mapping SourceColumn="SQLReportFileUploadUser" DataSetColumn="SQLReportFileUploadUser" />
+              <Mapping SourceColumn="SQLReportFileComment" DataSetColumn="SQLReportFileComment" />
+              <Mapping SourceColumn="CreateTime" DataSetColumn="CreateTime" />
+              <Mapping SourceColumn="UpdateTime" DataSetColumn="UpdateTime" />
+              <Mapping SourceColumn="SQLReportID" DataSetColumn="SQLReportID" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="FIDataConnectionString (Web.config)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="True" GeneratorGetMethodName="GetDataBy2" GeneratorSourceName="DeleteQuery" Modifier="Public" Name="DeleteQuery" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="True" UserGetMethodName="GetDataBy" UserSourceName="DeleteQuery">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="True">
+                    <CommandText>DELETE FROM SQLReportFile
+WHERE (SQLReportFileID = @SQLReportFileID)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="False" AutogeneratedName="SQLReportFileID" ColumnName="SQLReportFileID" DataSourceName="FIData.dbo.SQLReportFile" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@SQLReportFileID" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="SQLReportFileID" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+              </DbSource>
+              <DbSource ConnectionRef="FIDataConnectionString (Web.config)" DbObjectName="FIData.dbo.SQLReportFile" DbObjectType="Table" GenerateMethods="Get" GenerateShortCommands="True" GeneratorGetMethodName="GetDataByID" GetMethodModifier="Public" GetMethodName="GetDataByID" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="True" UserGetMethodName="GetDataByID" UserSourceName="GetDataByID1">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="True">
+                    <CommandText>SELECT SQLReportFileID, SQLReportFileName, SQLReportFileExtend, SQLReportFilePath, 
+      SQLReportFileUploadUser, SQLReportFileComment, CreateTime, UpdateTime
+FROM SQLReportFile
+WHERE (SQLReportFileID = @SQLReportFileID)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="False" AutogeneratedName="SQLReportFileID" ColumnName="SQLReportFileID" DataSourceName="FIData.dbo.SQLReportFile" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@SQLReportFileID" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="SQLReportFileID" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="FIDataConnectionString (Web.config)" DbObjectName="FiDataNew.dbo.SQLReportFile" DbObjectType="Table" GenerateMethods="Get" GenerateShortCommands="True" GeneratorGetMethodName="GetLastTopFirstData" GetMethodModifier="Public" GetMethodName="GetLastTopFirstData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="True" UserGetMethodName="GetLastTopFirstData" UserSourceName="GetLastTopFirstData1">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="True">
+                    <CommandText>SELECT TOP 1 CreateTime, SQLReportFileComment, SQLReportFileExtend, SQLReportFileID, SQLReportFileName, SQLReportFilePath, SQLReportFileUploadUser, SQLReportID, UpdateTime FROM SQLReportFile WHERE (SQLReportID = @SQLReportID) ORDER BY SQLReportFileID DESC</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="True" AutogeneratedName="SQLReportID" ColumnName="SQLReportID" DataSourceName="FiDataNew.dbo.SQLReportFile" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@SQLReportID" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="SQLReportID" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="FIDataConnectionString (Web.config)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="True" GeneratorSourceName="UpdateComment" Modifier="Public" Name="UpdateComment" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="True" UserGetMethodName="GetDataBy1" UserSourceName="UpdateComment">
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="True">
+                    <CommandText>UPDATE SQLReportFile
+SET SQLReportFileUploadUser = @SQLReportFileUploadUser, 
+      SQLReportFileComment = @SQLReportFileComment, 
+      UpdateTime = @UpdateTime
+WHERE (SQLReportFileID = @SQLReportFileID)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="True" AutogeneratedName="SQLReportFileUploadUser" ColumnName="SQLReportFileUploadUser" DataSourceName="FIData.dbo.SQLReportFile" DataTypeServer="nvarchar(50)" DbType="String" Direction="Input" ParameterName="@SQLReportFileUploadUser" Precision="0" ProviderType="NVarChar" Scale="0" Size="50" SourceColumn="SQLReportFileUploadUser" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="SQLReportFileComment" ColumnName="SQLReportFileComment" DataSourceName="FIData.dbo.SQLReportFile" DataTypeServer="text" DbType="AnsiString" Direction="Input" ParameterName="@SQLReportFileComment" Precision="0" ProviderType="Text" Scale="0" Size="2147483647" SourceColumn="SQLReportFileComment" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="UpdateTime" ColumnName="UpdateTime" DataSourceName="FIData.dbo.SQLReportFile" DataTypeServer="datetime" DbType="DateTime" Direction="Input" ParameterName="@UpdateTime" Precision="0" ProviderType="DateTime" Scale="0" Size="8" SourceColumn="UpdateTime" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="False" AutogeneratedName="SQLReportFileID" ColumnName="SQLReportFileID" DataSourceName="FIData.dbo.SQLReportFile" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@SQLReportFileID" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="SQLReportFileID" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+              <DbSource ConnectionRef="FIDataConnectionString (Web.config)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="True" GeneratorSourceName="UpdateQuery" Modifier="Public" Name="UpdateQuery" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="True" UserGetMethodName="GetDataBy2" UserSourceName="UpdateQuery">
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="True">
+                    <CommandText>UPDATE SQLReportFile
+SET SQLReportFileName = @SQLReportFileName, 
+      SQLReportFileExtend = @SQLReportFileExtend, 
+      SQLReportFilePath = @SQLReportFilePath, 
+      SQLReportFileUploadUser = @SQLReportFileUploadUser, 
+      SQLReportFileComment = @SQLReportFileComment, 
+      UpdateTime = @UpdateTime
+WHERE (SQLReportFileID = @SQLReportFileID)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="True" AutogeneratedName="SQLReportFileName" ColumnName="SQLReportFileName" DataSourceName="FIData.dbo.SQLReportFile" DataTypeServer="nvarchar(200)" DbType="String" Direction="Input" ParameterName="@SQLReportFileName" Precision="0" ProviderType="NVarChar" Scale="0" Size="200" SourceColumn="SQLReportFileName" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="SQLReportFileExtend" ColumnName="SQLReportFileExtend" DataSourceName="FIData.dbo.SQLReportFile" DataTypeServer="nvarchar(50)" DbType="String" Direction="Input" ParameterName="@SQLReportFileExtend" Precision="0" ProviderType="NVarChar" Scale="0" Size="50" SourceColumn="SQLReportFileExtend" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="SQLReportFilePath" ColumnName="SQLReportFilePath" DataSourceName="FIData.dbo.SQLReportFile" DataTypeServer="nvarchar(500)" DbType="String" Direction="Input" ParameterName="@SQLReportFilePath" Precision="0" ProviderType="NVarChar" Scale="0" Size="500" SourceColumn="SQLReportFilePath" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="SQLReportFileUploadUser" ColumnName="SQLReportFileUploadUser" DataSourceName="FIData.dbo.SQLReportFile" DataTypeServer="nvarchar(50)" DbType="String" Direction="Input" ParameterName="@SQLReportFileUploadUser" Precision="0" ProviderType="NVarChar" Scale="0" Size="50" SourceColumn="SQLReportFileUploadUser" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="SQLReportFileComment" ColumnName="SQLReportFileComment" DataSourceName="FIData.dbo.SQLReportFile" DataTypeServer="text" DbType="AnsiString" Direction="Input" ParameterName="@SQLReportFileComment" Precision="0" ProviderType="Text" Scale="0" Size="2147483647" SourceColumn="SQLReportFileComment" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="UpdateTime" ColumnName="UpdateTime" DataSourceName="FIData.dbo.SQLReportFile" DataTypeServer="datetime" DbType="DateTime" Direction="Input" ParameterName="@UpdateTime" Precision="0" ProviderType="DateTime" Scale="0" Size="8" SourceColumn="UpdateTime" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="False" AutogeneratedName="SQLReportFileID" ColumnName="SQLReportFileID" DataSourceName="FIData.dbo.SQLReportFile" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@SQLReportFileID" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="SQLReportFileID" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ERPAddinRightTableAdapter" GeneratorDataComponentClassName="ERPAddinRightTableAdapter" Name="ERPAddinRight" UserDataComponentName="ERPAddinRightTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="FIDataConnectionString (Web.config)" DbObjectName="FiDataNew.dbo.ERPAddinRight" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="True" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="False" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="False">
+                    <CommandText>DELETE FROM [ERPAddinRight] WHERE (([ERPAddinRightID] = @Original_ERPAddinRightID))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="False" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ERPAddinRightID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ERPAddinRightID" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="False">
+                    <CommandText>INSERT INTO [ERPAddinRight] ([SQLReportID], [ERPAddinRightName], [CreateTime], [CreateUser], [EditTime]) VALUES (@SQLReportID, @ERPAddinRightName, @CreateTime, @CreateUser, @EditTime);
+SELECT ERPAddinRightID, SQLReportID, ERPAddinRightName, CreateTime, CreateUser, EditTime FROM ERPAddinRight WHERE (ERPAddinRightID = SCOPE_IDENTITY())</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@SQLReportID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SQLReportID" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@ERPAddinRightName" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="ERPAddinRightName" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@CreateTime" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="CreateTime" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@CreateUser" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="CreateUser" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@EditTime" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="EditTime" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="True">
+                    <CommandText>SELECT ERPAddinRightID, SQLReportID, ERPAddinRightName, CreateTime, CreateUser, 
+      EditTime
+FROM ERPAddinRight</CommandText>
+                    <Parameters>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="False">
+                    <CommandText>UPDATE [ERPAddinRight] SET [SQLReportID] = @SQLReportID, [ERPAddinRightName] = @ERPAddinRightName, [CreateTime] = @CreateTime, [CreateUser] = @CreateUser, [EditTime] = @EditTime WHERE (([ERPAddinRightID] = @Original_ERPAddinRightID));
+SELECT ERPAddinRightID, SQLReportID, ERPAddinRightName, CreateTime, CreateUser, EditTime FROM ERPAddinRight WHERE (ERPAddinRightID = @ERPAddinRightID)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@SQLReportID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SQLReportID" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@ERPAddinRightName" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="ERPAddinRightName" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@CreateTime" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="CreateTime" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@CreateUser" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="CreateUser" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@EditTime" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="EditTime" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="False" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ERPAddinRightID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ERPAddinRightID" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                      <Parameter AllowDbNull="False" AutogeneratedName="ERPAddinRightID" ColumnName="ERPAddinRightID" DataSourceName="FiDataNew.dbo.ERPAddinRight" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@ERPAddinRightID" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="ERPAddinRightID" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ERPAddinRightID" DataSetColumn="ERPAddinRightID" />
+              <Mapping SourceColumn="SQLReportID" DataSetColumn="SQLReportID" />
+              <Mapping SourceColumn="ERPAddinRightName" DataSetColumn="ERPAddinRightName" />
+              <Mapping SourceColumn="CreateTime" DataSetColumn="CreateTime" />
+              <Mapping SourceColumn="CreateUser" DataSetColumn="CreateUser" />
+              <Mapping SourceColumn="EditTime" DataSetColumn="EditTime" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="FIDataConnectionString (Web.config)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="True" GeneratorSourceName="DeleteQuery" Modifier="Public" Name="DeleteQuery" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="True" UserGetMethodName="GetDataBy" UserSourceName="DeleteQuery">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="True">
+                    <CommandText>DELETE FROM ERPAddinRight
+WHERE (SQLReportID = @SQLReportID)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="True" AutogeneratedName="SQLReportID" ColumnName="SQLReportID" DataSourceName="FiDataNew.dbo.ERPAddinRight" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@SQLReportID" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="SQLReportID" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+              </DbSource>
+              <DbSource ConnectionRef="FIDataConnectionString (Web.config)" DbObjectName="FiDataNew.dbo.ERPAddinRight" DbObjectType="Table" GenerateMethods="Get" GenerateShortCommands="True" GeneratorGetMethodName="GetDataBySQLReportID" GetMethodModifier="Public" GetMethodName="GetDataBySQLReportID" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="True" UserGetMethodName="GetDataBySQLReportID" UserSourceName="GetDataBySQLReportID1">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="True">
+                    <CommandText>SELECT CreateTime, CreateUser, ERPAddinRightID, ERPAddinRightName, EditTime, 
+      SQLReportID
+FROM ERPAddinRight
+WHERE (SQLReportID = @SQLReportID)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="True" AutogeneratedName="SQLReportID" ColumnName="SQLReportID" DataSourceName="FiDataNew.dbo.ERPAddinRight" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@SQLReportID" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="SQLReportID" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="FIDataConnectionString (Web.config)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="True" GeneratorSourceName="InsertQuery" Modifier="Public" Name="InsertQuery" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="True" UserGetMethodName="GetDataBy1" UserSourceName="InsertQuery">
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="True">
+                    <CommandText>INSERT INTO ERPAddinRight
+      (SQLReportID, ERPAddinRightName, CreateUser)
+VALUES (@SQLReportID,@ERPAddinRightName,@CreateUser)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="True" AutogeneratedName="SQLReportID" ColumnName="SQLReportID" DataSourceName="FiDataNew.dbo.ERPAddinRight" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@SQLReportID" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="SQLReportID" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="ERPAddinRightName" ColumnName="ERPAddinRightName" DataSourceName="FiDataNew.dbo.ERPAddinRight" DataTypeServer="nvarchar(100)" DbType="String" Direction="Input" ParameterName="@ERPAddinRightName" Precision="0" ProviderType="NVarChar" Scale="0" Size="100" SourceColumn="ERPAddinRightName" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="CreateUser" ColumnName="CreateUser" DataSourceName="FiDataNew.dbo.ERPAddinRight" DataTypeServer="nvarchar(100)" DbType="String" Direction="Input" ParameterName="@CreateUser" Precision="0" ProviderType="NVarChar" Scale="0" Size="100" SourceColumn="CreateUser" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+              </DbSource>
+              <DbSource ConnectionRef="FIDataConnectionString (Web.config)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="True" GeneratorGetMethodName="GetDataBy1" GeneratorSourceName="UpdateQuery" Modifier="Public" Name="UpdateQuery" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="True" UserGetMethodName="GetDataBy2" UserSourceName="UpdateQuery">
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="True">
+                    <CommandText>UPDATE ERPAddinRight
+SET ERPAddinRightName = @ERPAddinRightName, EditTime = @EditTime
+WHERE (ERPAddinRightID = @ERPAddinRightID)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="True" AutogeneratedName="ERPAddinRightName" ColumnName="ERPAddinRightName" DataSourceName="FiDataNew.dbo.ERPAddinRight" DataTypeServer="nvarchar(100)" DbType="String" Direction="Input" ParameterName="@ERPAddinRightName" Precision="0" ProviderType="NVarChar" Scale="0" Size="100" SourceColumn="ERPAddinRightName" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="True" AutogeneratedName="EditTime" ColumnName="EditTime" DataSourceName="FiDataNew.dbo.ERPAddinRight" DataTypeServer="datetime" DbType="DateTime" Direction="Input" ParameterName="@EditTime" Precision="0" ProviderType="DateTime" Scale="0" Size="8" SourceColumn="EditTime" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                      <Parameter AllowDbNull="False" AutogeneratedName="ERPAddinRightID" ColumnName="ERPAddinRightID" DataSourceName="FiDataNew.dbo.ERPAddinRight" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@ERPAddinRightID" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="ERPAddinRightID" SourceColumnNullMapping="False" SourceVersion="Original">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+        </Tables>
+        <Sources>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="InfoSysEntity" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="InfoSysEntity" msprop:Generator_DataSetName="InfoSysEntity">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="SQLReportNameList" msprop:Generator_UserTableName="SQLReportNameList" msprop:Generator_RowDeletedName="SQLReportNameListRowDeleted" msprop:Generator_RowChangedName="SQLReportNameListRowChanged" msprop:Generator_RowClassName="SQLReportNameListRow" msprop:Generator_RowChangingName="SQLReportNameListRowChanging" msprop:Generator_RowEvArgName="SQLReportNameListRowChangeEvent" msprop:Generator_RowEvHandlerName="SQLReportNameListRowChangeEventHandler" msprop:Generator_TableClassName="SQLReportNameListDataTable" msprop:Generator_TableVarName="tableSQLReportNameList" msprop:Generator_RowDeletingName="SQLReportNameListRowDeleting" msprop:Generator_TablePropName="SQLReportNameList">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="SQLReportID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:Generator_UserColumnName="SQLReportID" msprop:Generator_ColumnPropNameInRow="SQLReportID" msprop:Generator_ColumnVarNameInTable="columnSQLReportID" msprop:Generator_ColumnPropNameInTable="SQLReportIDColumn" type="xs:int" />
+              <xs:element name="SQLReportFactory" msprop:Generator_UserColumnName="SQLReportFactory" msprop:Generator_ColumnPropNameInRow="SQLReportFactory" msprop:Generator_ColumnVarNameInTable="columnSQLReportFactory" msprop:Generator_ColumnPropNameInTable="SQLReportFactoryColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="SQLReportName" msprop:Generator_UserColumnName="SQLReportName" msprop:Generator_ColumnPropNameInRow="SQLReportName" msprop:Generator_ColumnVarNameInTable="columnSQLReportName" msprop:Generator_ColumnPropNameInTable="SQLReportNameColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SQLReportCate" msprop:Generator_UserColumnName="SQLReportCate" msprop:Generator_ColumnPropNameInRow="SQLReportCate" msprop:Generator_ColumnVarNameInTable="columnSQLReportCate" msprop:Generator_ColumnPropNameInTable="SQLReportCateColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="SQLReportBelongsTo" msprop:Generator_UserColumnName="SQLReportBelongsTo" msprop:Generator_ColumnVarNameInTable="columnSQLReportBelongsTo" msprop:Generator_ColumnPropNameInRow="SQLReportBelongsTo" msprop:Generator_ColumnPropNameInTable="SQLReportBelongsToColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="HitCount" msprop:Generator_UserColumnName="HitCount" msprop:Generator_ColumnPropNameInRow="HitCount" msprop:Generator_ColumnVarNameInTable="columnHitCount" msprop:Generator_ColumnPropNameInTable="HitCountColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="SQLReportStatus" msprop:Generator_UserColumnName="SQLReportStatus" msprop:Generator_ColumnVarNameInTable="columnSQLReportStatus" msprop:Generator_ColumnPropNameInRow="SQLReportStatus" msprop:Generator_ColumnPropNameInTable="SQLReportStatusColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="SQLReportShowURL" msprop:Generator_UserColumnName="SQLReportShowURL" msprop:Generator_ColumnPropNameInRow="SQLReportShowURL" msprop:Generator_ColumnVarNameInTable="columnSQLReportShowURL" msprop:Generator_ColumnPropNameInTable="SQLReportShowURLColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SQLReportSortIndex" msprop:Generator_UserColumnName="SQLReportSortIndex" msprop:Generator_ColumnPropNameInRow="SQLReportSortIndex" msprop:Generator_ColumnVarNameInTable="columnSQLReportSortIndex" msprop:Generator_ColumnPropNameInTable="SQLReportSortIndexColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="SQLReportType" msprop:Generator_UserColumnName="SQLReportType" msprop:Generator_ColumnPropNameInRow="SQLReportType" msprop:Generator_ColumnVarNameInTable="columnSQLReportType" msprop:Generator_ColumnPropNameInTable="SQLReportTypeColumn" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SQLReport" msprop:Generator_UserTableName="SQLReport" msprop:Generator_RowDeletedName="SQLReportRowDeleted" msprop:Generator_RowChangedName="SQLReportRowChanged" msprop:Generator_RowClassName="SQLReportRow" msprop:Generator_RowChangingName="SQLReportRowChanging" msprop:Generator_RowEvArgName="SQLReportRowChangeEvent" msprop:Generator_RowEvHandlerName="SQLReportRowChangeEventHandler" msprop:Generator_TableClassName="SQLReportDataTable" msprop:Generator_TableVarName="tableSQLReport" msprop:Generator_RowDeletingName="SQLReportRowDeleting" msprop:Generator_TablePropName="SQLReport">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="SQLReportID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:Generator_UserColumnName="SQLReportID" msprop:Generator_ColumnVarNameInTable="columnSQLReportID" msprop:Generator_ColumnPropNameInRow="SQLReportID" msprop:Generator_ColumnPropNameInTable="SQLReportIDColumn" type="xs:int" />
+              <xs:element name="SQLReportName" msprop:Generator_UserColumnName="SQLReportName" msprop:Generator_ColumnVarNameInTable="columnSQLReportName" msprop:Generator_ColumnPropNameInRow="SQLReportName" msprop:Generator_ColumnPropNameInTable="SQLReportNameColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SQLReportType" msprop:Generator_UserColumnName="SQLReportType" msprop:Generator_ColumnPropNameInRow="SQLReportType" msprop:Generator_ColumnVarNameInTable="columnSQLReportType" msprop:Generator_ColumnPropNameInTable="SQLReportTypeColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="SQLReportFactory" msprop:Generator_UserColumnName="SQLReportFactory" msprop:Generator_ColumnPropNameInRow="SQLReportFactory" msprop:Generator_ColumnVarNameInTable="columnSQLReportFactory" msprop:Generator_ColumnPropNameInTable="SQLReportFactoryColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="SQLReportCate" msprop:Generator_UserColumnName="SQLReportCate" msprop:Generator_ColumnVarNameInTable="columnSQLReportCate" msprop:Generator_ColumnPropNameInRow="SQLReportCate" msprop:Generator_ColumnPropNameInTable="SQLReportCateColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="SQLReportBelongsTo" msprop:Generator_UserColumnName="SQLReportBelongsTo" msprop:Generator_ColumnVarNameInTable="columnSQLReportBelongsTo" msprop:Generator_ColumnPropNameInRow="SQLReportBelongsTo" msprop:Generator_ColumnPropNameInTable="SQLReportBelongsToColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SQLReportSqlCommand" msprop:Generator_UserColumnName="SQLReportSqlCommand" msprop:Generator_ColumnVarNameInTable="columnSQLReportSqlCommand" msprop:Generator_ColumnPropNameInRow="SQLReportSqlCommand" msprop:Generator_ColumnPropNameInTable="SQLReportSqlCommandColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SQLReportSqlWhere" msprop:Generator_UserColumnName="SQLReportSqlWhere" msprop:Generator_ColumnVarNameInTable="columnSQLReportSqlWhere" msprop:Generator_ColumnPropNameInRow="SQLReportSqlWhere" msprop:Generator_ColumnPropNameInTable="SQLReportSqlWhereColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SQLReportSqlOrder" msprop:Generator_UserColumnName="SQLReportSqlOrder" msprop:Generator_ColumnVarNameInTable="columnSQLReportSqlOrder" msprop:Generator_ColumnPropNameInRow="SQLReportSqlOrder" msprop:Generator_ColumnPropNameInTable="SQLReportSqlOrderColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SQLReportSpecialField" msprop:Generator_UserColumnName="SQLReportSpecialField" msprop:Generator_ColumnVarNameInTable="columnSQLReportSpecialField" msprop:Generator_ColumnPropNameInRow="SQLReportSpecialField" msprop:Generator_ColumnPropNameInTable="SQLReportSpecialFieldColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SQLReportShowURL" msprop:Generator_UserColumnName="SQLReportShowURL" msprop:Generator_ColumnPropNameInRow="SQLReportShowURL" msprop:Generator_ColumnVarNameInTable="columnSQLReportShowURL" msprop:Generator_ColumnPropNameInTable="SQLReportShowURLColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SQLReportCalculateField" msprop:Generator_UserColumnName="SQLReportCalculateField" msprop:Generator_ColumnPropNameInRow="SQLReportCalculateField" msprop:Generator_ColumnVarNameInTable="columnSQLReportCalculateField" msprop:Generator_ColumnPropNameInTable="SQLReportCalculateFieldColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SQLReportComment" msprop:Generator_UserColumnName="SQLReportComment" msprop:Generator_ColumnVarNameInTable="columnSQLReportComment" msprop:Generator_ColumnPropNameInRow="SQLReportComment" msprop:Generator_ColumnPropNameInTable="SQLReportCommentColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SQLReportFuncCode" msprop:Generator_UserColumnName="SQLReportFuncCode" msprop:Generator_ColumnPropNameInRow="SQLReportFuncCode" msprop:Generator_ColumnVarNameInTable="columnSQLReportFuncCode" msprop:Generator_ColumnPropNameInTable="SQLReportFuncCodeColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="SQLReportStatus" msprop:Generator_UserColumnName="SQLReportStatus" msprop:Generator_ColumnVarNameInTable="columnSQLReportStatus" msprop:Generator_ColumnPropNameInRow="SQLReportStatus" msprop:Generator_ColumnPropNameInTable="SQLReportStatusColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="Creator" msprop:Generator_UserColumnName="Creator" msprop:Generator_ColumnVarNameInTable="columnCreator" msprop:Generator_ColumnPropNameInRow="Creator" msprop:Generator_ColumnPropNameInTable="CreatorColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Editor" msprop:Generator_UserColumnName="Editor" msprop:Generator_ColumnVarNameInTable="columnEditor" msprop:Generator_ColumnPropNameInRow="Editor" msprop:Generator_ColumnPropNameInTable="EditorColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CreateTime" msprop:Generator_UserColumnName="CreateTime" msprop:Generator_ColumnVarNameInTable="columnCreateTime" msprop:Generator_ColumnPropNameInRow="CreateTime" msprop:Generator_ColumnPropNameInTable="CreateTimeColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="HitCount" msprop:Generator_UserColumnName="HitCount" msprop:Generator_ColumnPropNameInRow="HitCount" msprop:Generator_ColumnVarNameInTable="columnHitCount" msprop:Generator_ColumnPropNameInTable="HitCountColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="EditTime" msprop:Generator_UserColumnName="EditTime" msprop:Generator_ColumnVarNameInTable="columnEditTime" msprop:Generator_ColumnPropNameInRow="EditTime" msprop:Generator_ColumnPropNameInTable="EditTimeColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="SQLReportSortIndex" msprop:Generator_UserColumnName="SQLReportSortIndex" msprop:Generator_ColumnPropNameInRow="SQLReportSortIndex" msprop:Generator_ColumnVarNameInTable="columnSQLReportSortIndex" msprop:Generator_ColumnPropNameInTable="SQLReportSortIndexColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="SQLReportIsLimited" msprop:Generator_UserColumnName="SQLReportIsLimited" msprop:Generator_ColumnVarNameInTable="columnSQLReportIsLimited" msprop:Generator_ColumnPropNameInRow="SQLReportIsLimited" msprop:Generator_ColumnPropNameInTable="SQLReportIsLimitedColumn" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SQLReportUserRight" msprop:Generator_UserTableName="SQLReportUserRight" msprop:Generator_RowDeletedName="SQLReportUserRightRowDeleted" msprop:Generator_RowChangedName="SQLReportUserRightRowChanged" msprop:Generator_RowClassName="SQLReportUserRightRow" msprop:Generator_RowChangingName="SQLReportUserRightRowChanging" msprop:Generator_RowEvArgName="SQLReportUserRightRowChangeEvent" msprop:Generator_RowEvHandlerName="SQLReportUserRightRowChangeEventHandler" msprop:Generator_TableClassName="SQLReportUserRightDataTable" msprop:Generator_TableVarName="tableSQLReportUserRight" msprop:Generator_RowDeletingName="SQLReportUserRightRowDeleting" msprop:Generator_TablePropName="SQLReportUserRight">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="SQLReportUserRightID" msprop:Generator_UserColumnName="SQLReportUserRightID" msprop:Generator_ColumnVarNameInTable="columnSQLReportUserRightID" msprop:Generator_ColumnPropNameInRow="SQLReportUserRightID" msprop:Generator_ColumnPropNameInTable="SQLReportUserRightIDColumn" type="xs:int" />
+              <xs:element name="LoginUser" msprop:Generator_UserColumnName="LoginUser" msprop:Generator_ColumnVarNameInTable="columnLoginUser" msprop:Generator_ColumnPropNameInRow="LoginUser" msprop:Generator_ColumnPropNameInTable="LoginUserColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="LoginUserRealName" msprop:Generator_UserColumnName="LoginUserRealName" msprop:Generator_ColumnVarNameInTable="columnLoginUserRealName" msprop:Generator_ColumnPropNameInRow="LoginUserRealName" msprop:Generator_ColumnPropNameInTable="LoginUserRealNameColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DepartmentList" msprop:Generator_UserColumnName="DepartmentList" msprop:Generator_ColumnVarNameInTable="columnDepartmentList" msprop:Generator_ColumnPropNameInRow="DepartmentList" msprop:Generator_ColumnPropNameInTable="DepartmentListColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SQLReportIDList" msprop:Generator_UserColumnName="SQLReportIDList" msprop:Generator_ColumnVarNameInTable="columnSQLReportIDList" msprop:Generator_ColumnPropNameInRow="SQLReportIDList" msprop:Generator_ColumnPropNameInTable="SQLReportIDListColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="RightsList" msprop:Generator_UserColumnName="RightsList" msprop:Generator_ColumnVarNameInTable="columnRightsList" msprop:Generator_ColumnPropNameInRow="RightsList" msprop:Generator_ColumnPropNameInTable="RightsListColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Status" msprop:Generator_UserColumnName="Status" msprop:Generator_ColumnVarNameInTable="columnStatus" msprop:Generator_ColumnPropNameInRow="Status" msprop:Generator_ColumnPropNameInTable="StatusColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="CreateTime" msprop:Generator_UserColumnName="CreateTime" msprop:Generator_ColumnVarNameInTable="columnCreateTime" msprop:Generator_ColumnPropNameInRow="CreateTime" msprop:Generator_ColumnPropNameInTable="CreateTimeColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="FactoryID" msprop:Generator_UserColumnName="FactoryID" msprop:Generator_ColumnVarNameInTable="columnFactoryID" msprop:Generator_ColumnPropNameInRow="FactoryID" msprop:Generator_ColumnPropNameInTable="FactoryIDColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="DepartmentID" msprop:Generator_UserColumnName="DepartmentID" msprop:Generator_ColumnVarNameInTable="columnDepartmentID" msprop:Generator_ColumnPropNameInRow="DepartmentID" msprop:Generator_ColumnPropNameInTable="DepartmentIDColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="EmployeeID" msprop:Generator_UserColumnName="EmployeeID" msprop:Generator_ColumnPropNameInRow="EmployeeID" msprop:Generator_ColumnVarNameInTable="columnEmployeeID" msprop:Generator_ColumnPropNameInTable="EmployeeIDColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UserType" msprop:Generator_UserColumnName="UserType" msprop:Generator_ColumnPropNameInRow="UserType" msprop:Generator_ColumnVarNameInTable="columnUserType" msprop:Generator_ColumnPropNameInTable="UserTypeColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="AddinIDList" msprop:Generator_UserColumnName="AddinIDList" msprop:Generator_ColumnPropNameInRow="AddinIDList" msprop:Generator_ColumnVarNameInTable="columnAddinIDList" msprop:Generator_ColumnPropNameInTable="AddinIDListColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SQLReportUserRightView" msprop:Generator_UserTableName="SQLReportUserRightView" msprop:Generator_RowDeletedName="SQLReportUserRightViewRowDeleted" msprop:Generator_RowChangedName="SQLReportUserRightViewRowChanged" msprop:Generator_RowClassName="SQLReportUserRightViewRow" msprop:Generator_RowChangingName="SQLReportUserRightViewRowChanging" msprop:Generator_RowEvArgName="SQLReportUserRightViewRowChangeEvent" msprop:Generator_RowEvHandlerName="SQLReportUserRightViewRowChangeEventHandler" msprop:Generator_TableClassName="SQLReportUserRightViewDataTable" msprop:Generator_TableVarName="tableSQLReportUserRightView" msprop:Generator_RowDeletingName="SQLReportUserRightViewRowDeleting" msprop:Generator_TablePropName="SQLReportUserRightView">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="SQLReportUserRightID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:Generator_UserColumnName="SQLReportUserRightID" msprop:Generator_ColumnVarNameInTable="columnSQLReportUserRightID" msprop:Generator_ColumnPropNameInRow="SQLReportUserRightID" msprop:Generator_ColumnPropNameInTable="SQLReportUserRightIDColumn" type="xs:int" />
+              <xs:element name="LoginUser" msprop:Generator_UserColumnName="LoginUser" msprop:Generator_ColumnVarNameInTable="columnLoginUser" msprop:Generator_ColumnPropNameInRow="LoginUser" msprop:Generator_ColumnPropNameInTable="LoginUserColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="LoginUserRealName" msprop:Generator_UserColumnName="LoginUserRealName" msprop:Generator_ColumnVarNameInTable="columnLoginUserRealName" msprop:Generator_ColumnPropNameInRow="LoginUserRealName" msprop:Generator_ColumnPropNameInTable="LoginUserRealNameColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DepartmentList" msprop:Generator_UserColumnName="DepartmentList" msprop:Generator_ColumnVarNameInTable="columnDepartmentList" msprop:Generator_ColumnPropNameInRow="DepartmentList" msprop:Generator_ColumnPropNameInTable="DepartmentListColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FactoryID" msprop:Generator_UserColumnName="FactoryID" msprop:Generator_ColumnVarNameInTable="columnFactoryID" msprop:Generator_ColumnPropNameInRow="FactoryID" msprop:Generator_ColumnPropNameInTable="FactoryIDColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="DepartmentID" msprop:Generator_UserColumnName="DepartmentID" msprop:Generator_ColumnVarNameInTable="columnDepartmentID" msprop:Generator_ColumnPropNameInRow="DepartmentID" msprop:Generator_ColumnPropNameInTable="DepartmentIDColumn" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SQLReportUsingHistory" msprop:Generator_UserTableName="SQLReportUsingHistory" msprop:Generator_RowDeletedName="SQLReportUsingHistoryRowDeleted" msprop:Generator_RowChangedName="SQLReportUsingHistoryRowChanged" msprop:Generator_RowClassName="SQLReportUsingHistoryRow" msprop:Generator_RowChangingName="SQLReportUsingHistoryRowChanging" msprop:Generator_RowEvArgName="SQLReportUsingHistoryRowChangeEvent" msprop:Generator_RowEvHandlerName="SQLReportUsingHistoryRowChangeEventHandler" msprop:Generator_TableClassName="SQLReportUsingHistoryDataTable" msprop:Generator_TableVarName="tableSQLReportUsingHistory" msprop:Generator_RowDeletingName="SQLReportUsingHistoryRowDeleting" msprop:Generator_TablePropName="SQLReportUsingHistory">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="SQLReportUsingHistoryID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:Generator_UserColumnName="SQLReportUsingHistoryID" msprop:Generator_ColumnPropNameInRow="SQLReportUsingHistoryID" msprop:Generator_ColumnVarNameInTable="columnSQLReportUsingHistoryID" msprop:Generator_ColumnPropNameInTable="SQLReportUsingHistoryIDColumn" type="xs:int" />
+              <xs:element name="LoginUser" msprop:Generator_UserColumnName="LoginUser" msprop:Generator_ColumnPropNameInRow="LoginUser" msprop:Generator_ColumnVarNameInTable="columnLoginUser" msprop:Generator_ColumnPropNameInTable="LoginUserColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CreateTime" msprop:Generator_UserColumnName="CreateTime" msprop:Generator_ColumnPropNameInRow="CreateTime" msprop:Generator_ColumnVarNameInTable="columnCreateTime" msprop:Generator_ColumnPropNameInTable="CreateTimeColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="SQLReportID" msprop:Generator_UserColumnName="SQLReportID" msprop:Generator_ColumnPropNameInRow="SQLReportID" msprop:Generator_ColumnVarNameInTable="columnSQLReportID" msprop:Generator_ColumnPropNameInTable="SQLReportIDColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="IP" msprop:Generator_UserColumnName="IP" msprop:Generator_ColumnPropNameInRow="IP" msprop:Generator_ColumnVarNameInTable="columnIP" msprop:Generator_ColumnPropNameInTable="IPColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SQLReportUsingHistoryView" msprop:Generator_UserTableName="SQLReportUsingHistoryView" msprop:Generator_RowDeletedName="SQLReportUsingHistoryViewRowDeleted" msprop:Generator_RowChangedName="SQLReportUsingHistoryViewRowChanged" msprop:Generator_RowClassName="SQLReportUsingHistoryViewRow" msprop:Generator_RowChangingName="SQLReportUsingHistoryViewRowChanging" msprop:Generator_RowEvArgName="SQLReportUsingHistoryViewRowChangeEvent" msprop:Generator_RowEvHandlerName="SQLReportUsingHistoryViewRowChangeEventHandler" msprop:Generator_TableClassName="SQLReportUsingHistoryViewDataTable" msprop:Generator_TableVarName="tableSQLReportUsingHistoryView" msprop:Generator_RowDeletingName="SQLReportUsingHistoryViewRowDeleting" msprop:Generator_TablePropName="SQLReportUsingHistoryView">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="LoginUser" msprop:Generator_UserColumnName="LoginUser" msprop:Generator_ColumnPropNameInRow="LoginUser" msprop:Generator_ColumnVarNameInTable="columnLoginUser" msprop:Generator_ColumnPropNameInTable="LoginUserColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="LoginUserRealName" msprop:Generator_UserColumnName="LoginUserRealName" msprop:Generator_ColumnPropNameInRow="LoginUserRealName" msprop:Generator_ColumnVarNameInTable="columnLoginUserRealName" msprop:Generator_ColumnPropNameInTable="LoginUserRealNameColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IP" msprop:Generator_UserColumnName="IP" msprop:Generator_ColumnPropNameInRow="IP" msprop:Generator_ColumnVarNameInTable="columnIP" msprop:Generator_ColumnPropNameInTable="IPColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SQLReportID" msprop:Generator_UserColumnName="SQLReportID" msprop:Generator_ColumnPropNameInRow="SQLReportID" msprop:Generator_ColumnVarNameInTable="columnSQLReportID" msprop:Generator_ColumnPropNameInTable="SQLReportIDColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="SQLReportName" msprop:Generator_UserColumnName="SQLReportName" msprop:Generator_ColumnPropNameInRow="SQLReportName" msprop:Generator_ColumnVarNameInTable="columnSQLReportName" msprop:Generator_ColumnPropNameInTable="SQLReportNameColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CreateTime" msprop:Generator_UserColumnName="CreateTime" msprop:Generator_ColumnPropNameInRow="CreateTime" msprop:Generator_ColumnVarNameInTable="columnCreateTime" msprop:Generator_ColumnPropNameInTable="CreateTimeColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="HitNum" msdata:ReadOnly="true" msprop:Generator_UserColumnName="HitNum" msprop:Generator_ColumnPropNameInRow="HitNum" msprop:Generator_ColumnVarNameInTable="columnHitNum" msprop:Generator_ColumnPropNameInTable="HitNumColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="SQLReportFactory" msprop:Generator_UserColumnName="SQLReportFactory" msprop:Generator_ColumnVarNameInTable="columnSQLReportFactory" msprop:Generator_ColumnPropNameInRow="SQLReportFactory" msprop:Generator_ColumnPropNameInTable="SQLReportFactoryColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="SQLReportType" msprop:Generator_UserColumnName="SQLReportType" msprop:Generator_ColumnPropNameInRow="SQLReportType" msprop:Generator_ColumnVarNameInTable="columnSQLReportType" msprop:Generator_ColumnPropNameInTable="SQLReportTypeColumn" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SQLReportFile" msprop:Generator_UserTableName="SQLReportFile" msprop:Generator_RowDeletedName="SQLReportFileRowDeleted" msprop:Generator_RowChangedName="SQLReportFileRowChanged" msprop:Generator_RowClassName="SQLReportFileRow" msprop:Generator_RowChangingName="SQLReportFileRowChanging" msprop:Generator_RowEvArgName="SQLReportFileRowChangeEvent" msprop:Generator_RowEvHandlerName="SQLReportFileRowChangeEventHandler" msprop:Generator_TableClassName="SQLReportFileDataTable" msprop:Generator_TableVarName="tableSQLReportFile" msprop:Generator_RowDeletingName="SQLReportFileRowDeleting" msprop:Generator_TablePropName="SQLReportFile">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="SQLReportFileID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:Generator_UserColumnName="SQLReportFileID" msprop:Generator_ColumnPropNameInRow="SQLReportFileID" msprop:Generator_ColumnVarNameInTable="columnSQLReportFileID" msprop:Generator_ColumnPropNameInTable="SQLReportFileIDColumn" type="xs:int" />
+              <xs:element name="SQLReportFileName" msprop:Generator_UserColumnName="SQLReportFileName" msprop:Generator_ColumnPropNameInRow="SQLReportFileName" msprop:Generator_ColumnVarNameInTable="columnSQLReportFileName" msprop:Generator_ColumnPropNameInTable="SQLReportFileNameColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SQLReportFileExtend" msprop:Generator_UserColumnName="SQLReportFileExtend" msprop:Generator_ColumnPropNameInRow="SQLReportFileExtend" msprop:Generator_ColumnVarNameInTable="columnSQLReportFileExtend" msprop:Generator_ColumnPropNameInTable="SQLReportFileExtendColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SQLReportFilePath" msprop:Generator_UserColumnName="SQLReportFilePath" msprop:Generator_ColumnPropNameInRow="SQLReportFilePath" msprop:Generator_ColumnVarNameInTable="columnSQLReportFilePath" msprop:Generator_ColumnPropNameInTable="SQLReportFilePathColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SQLReportFileUploadUser" msprop:Generator_UserColumnName="SQLReportFileUploadUser" msprop:Generator_ColumnPropNameInRow="SQLReportFileUploadUser" msprop:Generator_ColumnVarNameInTable="columnSQLReportFileUploadUser" msprop:Generator_ColumnPropNameInTable="SQLReportFileUploadUserColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SQLReportFileComment" msprop:Generator_UserColumnName="SQLReportFileComment" msprop:Generator_ColumnPropNameInRow="SQLReportFileComment" msprop:Generator_ColumnVarNameInTable="columnSQLReportFileComment" msprop:Generator_ColumnPropNameInTable="SQLReportFileCommentColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CreateTime" msprop:Generator_UserColumnName="CreateTime" msprop:Generator_ColumnPropNameInRow="CreateTime" msprop:Generator_ColumnVarNameInTable="columnCreateTime" msprop:Generator_ColumnPropNameInTable="CreateTimeColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="UpdateTime" msprop:Generator_UserColumnName="UpdateTime" msprop:Generator_ColumnPropNameInRow="UpdateTime" msprop:Generator_ColumnVarNameInTable="columnUpdateTime" msprop:Generator_ColumnPropNameInTable="UpdateTimeColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="SQLReportID" msprop:Generator_UserColumnName="SQLReportID" msprop:Generator_ColumnVarNameInTable="columnSQLReportID" msprop:Generator_ColumnPropNameInRow="SQLReportID" msprop:Generator_ColumnPropNameInTable="SQLReportIDColumn" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ERPAddinRight" msprop:Generator_UserTableName="ERPAddinRight" msprop:Generator_RowDeletedName="ERPAddinRightRowDeleted" msprop:Generator_RowChangedName="ERPAddinRightRowChanged" msprop:Generator_RowClassName="ERPAddinRightRow" msprop:Generator_RowChangingName="ERPAddinRightRowChanging" msprop:Generator_RowEvArgName="ERPAddinRightRowChangeEvent" msprop:Generator_RowEvHandlerName="ERPAddinRightRowChangeEventHandler" msprop:Generator_TableClassName="ERPAddinRightDataTable" msprop:Generator_TableVarName="tableERPAddinRight" msprop:Generator_RowDeletingName="ERPAddinRightRowDeleting" msprop:Generator_TablePropName="ERPAddinRight">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ERPAddinRightID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:Generator_UserColumnName="ERPAddinRightID" msprop:Generator_ColumnPropNameInRow="ERPAddinRightID" msprop:Generator_ColumnVarNameInTable="columnERPAddinRightID" msprop:Generator_ColumnPropNameInTable="ERPAddinRightIDColumn" type="xs:int" />
+              <xs:element name="SQLReportID" msprop:Generator_UserColumnName="SQLReportID" msprop:Generator_ColumnPropNameInRow="SQLReportID" msprop:Generator_ColumnVarNameInTable="columnSQLReportID" msprop:Generator_ColumnPropNameInTable="SQLReportIDColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="ERPAddinRightName" msprop:Generator_UserColumnName="ERPAddinRightName" msprop:Generator_ColumnPropNameInRow="ERPAddinRightName" msprop:Generator_ColumnVarNameInTable="columnERPAddinRightName" msprop:Generator_ColumnPropNameInTable="ERPAddinRightNameColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CreateTime" msprop:Generator_UserColumnName="CreateTime" msprop:Generator_ColumnPropNameInRow="CreateTime" msprop:Generator_ColumnVarNameInTable="columnCreateTime" msprop:Generator_ColumnPropNameInTable="CreateTimeColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="CreateUser" msprop:Generator_UserColumnName="CreateUser" msprop:Generator_ColumnPropNameInRow="CreateUser" msprop:Generator_ColumnVarNameInTable="columnCreateUser" msprop:Generator_ColumnPropNameInTable="CreateUserColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="EditTime" msprop:Generator_UserColumnName="EditTime" msprop:Generator_ColumnPropNameInRow="EditTime" msprop:Generator_ColumnVarNameInTable="columnEditTime" msprop:Generator_ColumnPropNameInTable="EditTimeColumn" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:SQLReportNameList" />
+      <xs:field xpath="mstns:SQLReportID" />
+    </xs:unique>
+    <xs:unique name="SQLReport_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:SQLReport" />
+      <xs:field xpath="mstns:SQLReportID" />
+    </xs:unique>
+    <xs:unique name="SQLReportUserRight_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:SQLReportUserRight" />
+      <xs:field xpath="mstns:SQLReportUserRightID" />
+    </xs:unique>
+    <xs:unique name="SQLReportUserRightView_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:SQLReportUserRightView" />
+      <xs:field xpath="mstns:SQLReportUserRightID" />
+    </xs:unique>
+    <xs:unique name="SQLReportUsingHistory_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:SQLReportUsingHistory" />
+      <xs:field xpath="mstns:SQLReportUsingHistoryID" />
+    </xs:unique>
+    <xs:unique name="SQLReportFile_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:SQLReportFile" />
+      <xs:field xpath="mstns:SQLReportFileID" />
+    </xs:unique>
+    <xs:unique name="ERPAddinRight_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:ERPAddinRight" />
+      <xs:field xpath="mstns:ERPAddinRightID" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

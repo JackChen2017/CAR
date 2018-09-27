@@ -1,0 +1,160 @@
+﻿body{
+	margin:0px;
+	width:1000px;
+	font-size:12px;
+	color:black
+}
+table, input, select, textarea, .maintable, .button,{
+    font: 12px Arial, Tahoma, Verdana;
+}
+
+table{border-collapse:collapse;}
+
+ A:link {
+	COLOR: #3B86DF;TEXT-DECORATION: none
+}
+A:active {
+	COLOR: #3B86DF;TEXT-DECORATION: none
+}
+A:visited {
+	COLOR: #3B86DF;TEXT-DECORATION: none
+}
+A:hover {
+	COLOR: #000000;TEXT-DECORATION: none
+}
+.table{border-collapse:collapse;}
+
+/*logo部分*/
+#logo{
+	width:100%;
+	height:60px;
+}
+/*分隔行*/
+.divide{height:5px;font-size:1px;}
+
+}
+/*子导航条*/
+.erpsubnav{
+width:100%;
+height:12px;
+	background-image: url(../../../IMAGES/erpsubnav_bg.gif);
+}
+
+.leftsidebarcontent{
+    padding:2px;
+    width:300px;
+}
+
+.leftsidebaricon{
+	width:20px;
+	height:22px;
+	background-image: url(../../../IMAGES/gray_icon02.gif);
+	text-align:center;
+}
+
+.leftsidebardotline{
+	width:300px;
+	height:22px;
+	background-image: url(../../../IMAGES/gray_dotline.gif);
+	text-align:left;
+}
+
+.leftreportimage{
+	width:42%;
+	height:120px;
+	
+	}
+.birthdayimage01{
+	width:303px;
+}	
+.birthdayimage02{
+	width:40%;
+}
+
+
+/*footer*/
+#footer{
+width:100%;}
+#leftsidebartable{
+	width:180px;
+}
+.lefttabletop{
+	width:180px;
+	height:30px;
+	background-image: url(../../../IMAGES/lefttabletop.gif);
+	font-weight:bold;
+	text-align:left;
+}
+.leftsidebartop{
+   	width:180px;
+	background-image: url(../../../IMAGES/leftsidebartop.gif);
+	height:16px;
+	font-size:6px;
+
+}
+.leftsidebarbottom{
+   	width:180px;
+	background-image: url(../../../IMAGES/leftsidebarbottom.gif);
+	height:8px;
+	font-size:6px;
+
+}
+
+.leftsidebarbg{
+   	width:180px;
+	background-image: url(../../../IMAGES/leftsidebarbg.gif);
+	height:1px;
+
+}
+.leftsidebaricon{
+	width:20px;
+	height:22px;
+	background-image: url(../../../IMAGES/icon02.gif);
+	text-align:center;
+}
+.leftsidebarcontent{
+    width:180px;
+}
+.lefttitlebgopen{
+   	width:180px;
+	background-image: url(../../../IMAGES/pic_open.gif);
+	height:26px;
+
+}
+.lefttitlebgclose{
+   	width:180px;
+	background-image: url(../../../IMAGES/pic_close.gif);
+	height:26px;
+
+}
+
+
+
+/*内页右边内容*/
+.rightsidebartop{
+	height:18px;
+	width:712px;
+}
+
+.rightsidebarbg{
+   	width:712px;
+	background-image: url(../../../IMAGES/rightsidebarbg.gif);
+	height:1px;
+	padding:5px;
+}
+.rightsidebarbottom{
+   	width:712px;
+	background-image: url(../../../IMAGES/rightsidebarbottom.gif);
+	height:12px;
+}
+.rightsidelisttitle{
+   	width:710px;
+	background-image: url(../../../IMAGES/rightsidelisttitle.gif);
+	height:28px;
+	padding-left:35px;
+}
+.rightsidelistcontent{
+width:95%;
+text-align:center;
+}
+

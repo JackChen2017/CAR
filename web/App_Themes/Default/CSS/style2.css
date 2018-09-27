@@ -1,0 +1,135 @@
+/*左边导航标题*/
+.titleleft{
+	color:#ffffff;
+	background-image: url(../../../IMAGES/column_bg.gif);
+	padding-left: 30px;
+	font-size: 14px;
+}
+    /*中间信息标题*/
+.sub_titlecenter{
+	color:#ffffff;
+	background-image: url(../../../IMAGES/titleright1.gif);
+	padding-left: 28px;
+	height:25px;
+	width:680px;
+	font-size: 12px;
+	font-weight: bolder;
+	padding-top:3px;
+}
+
+/*新闻标题*/
+.news_title{
+	color:#CC0000;
+	background-image: url(../../../IMAGES/newstitle.gif);
+	padding-left: 28px;
+	height:32px;
+	width:680px;
+	font-size: 14px;
+	font-weight: bolder;
+	text-align:center;
+}
+/*新闻的内容*/
+.newstext{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 9pt;
+	line-height: 200%;
+	color: #000000;
+	text-decoration: none;
+	padding:5px;
+}
+/*新闻的时间显示*/
+.newstime{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 9pt;
+	color: #999999;
+	text-decoration: none;
+}
+
+/*网站链接的设置*/
+A:link {
+	COLOR: #2150A8;TEXT-DECORATION: none
+}
+A:active {
+	COLOR: #2150A8;TEXT-DECORATION: none
+}
+A:visited {
+	COLOR: #2150A8;TEXT-DECORATION: none
+}
+A:hover {
+	COLOR: #CC0000;TEXT-DECORATION: none
+}
+/*新闻总列表链接的设置*/
+A.titleLink:link {
+	COLOR: #ffffff; TEXT-DECORATION: none
+}
+A.titleLink:visited {
+	COLOR: #ffffff; TEXT-DECORATION: none
+}
+A.titleLink:hover {
+	COLOR: #ffffff; TEXT-DECORATION: underline
+}
+
+/*网站底部设置*/
+.footer{
+	font-size: 9pt;
+	color: #000000;
+	text-decoration: none;
+	text-align:center;
+	background-image: url(../../../IMAGES/foot.gif);
+
+}
+
+.aa
+{
+	width :100px;
+	
+	overflow:hidden ;
+	
+	}
+	
+.vertTable {
+	border-width:thin;font-size:5px;
+}
+
+.vertTable th {
+	float:left; writing-mode : tb-rl;text-align:center;font-size:5px; 
+}
+
+.vertTable td{
+	float:left;font-size:5px;
+}
+
+
+.vertTableNoFont {
+	border-width:thin;
+}
+
+.vertTableNoFont th {
+	layout-flow:vertical-ideographic;text-align:center;
+}
+
+.vertTableNoFont td{
+	float:left;
+}
+
+
+.vertTableNoFontForTH {
+	layout-flow:vertical-ideographic;text-align:center;
+}
+
+.strongFont
+{
+	 text-align:center; font-weight:bold;
+}
+
+.fontForRight
+{
+	 text-align:right; 
+}
+
+/**.vertTable th {
+	float:left; writing-mode : tb-rl;text-align:center;font-size:6px; 
+}
+.vertTableNoFont th {
+	layout-flow:vertical-ideographic;text-align:center;
+}**/

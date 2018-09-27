@@ -1,0 +1,17 @@
+﻿body{
+	margin:0px;
+	width:1000px;
+	font-size:12px;
+	color:black
+}
+table, input, select, textarea, .maintable, .button{
+    font: 12px Arial, Tahoma, Verdana;
+}
+html {
+	scrollbar-face-color: #D1E7F6;
+	scrollbar-highlight-color: #D7DCEC;
+	scrollbar-shadow-color: #2587CC;
+	scrollbar-3dlight-color: #2587CC;
+	FILTER: chroma(COLOR=#eeeeee);
+	overflow: auto;
+}

@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ERPReportDepartment>
+  <!-- 富山 Start -->
+  <Row>
+    <Factory>1</Factory>
+    <Name>中央运营</Name>
+    <Value >100</Value>
+  </Row>
+  <Row>
+    <Factory>1</Factory>
+    <Name>采购</Name>
+    <Value >1</Value>
+  </Row>
+  <Row>
+    <Factory>1</Factory>
+    <Name>销售</Name>
+    <Value >2</Value>
+  </Row>
+  <Row>
+    <Factory>1</Factory>
+    <Name>生计</Name>
+    <Value >3</Value>
+  </Row>
+  <Row>
+    <Factory>1</Factory>
+    <Name>物控</Name>
+    <Value >4</Value>
+  </Row>
+  <Row>
+    <Factory>1</Factory>
+    <Name>品保</Name>
+    <Value >5</Value>
+  </Row>
+  <Row>
+    <Factory>1</Factory>
+    <Name>技术</Name>
+    <Value >6</Value>
+  </Row>
+  <Row>
+    <Factory>1</Factory>
+    <Name>财务</Name>
+    <Value >7</Value>
+  </Row>
+  <Row>
+    <Factory>1</Factory>
+    <Name>产品</Name>
+    <Value >8</Value>
+  </Row>
+  <Row>
+    <Factory>1</Factory>
+    <Name>制造</Name>
+    <Value >9</Value>
+  </Row>
+  <Row>
+    <Factory>1</Factory>
+    <Name>设备</Name>
+    <Value >10</Value>
+  </Row>
+
+  <!-- 富山 End -->
+
+  <!-- 多层 Start -->
+  <Row>
+    <Factory>2</Factory>
+    <Name>中央运营</Name>
+    <Value >100</Value>
+  </Row>
+  <Row>
+    <Factory>2</Factory>
+    <Name>采购</Name>
+    <Value >1</Value>
+  </Row>
+  <Row>
+    <Factory>2</Factory>
+    <Name>计划</Name>
+    <Value >2</Value>
+  </Row>
+  <Row>
+    <Factory>2</Factory>
+    <Name>物控</Name>
+    <Value >3</Value>
+  </Row>
+  <Row>
+    <Factory>2</Factory>
+    <Name>品质</Name>
+    <Value >4</Value>
+  </Row>
+
+  <!-- 多层 End -->
+
+  <!-- 越亚 Start -->
+  <Row>
+    <Factory>3</Factory>
+    <Name>运营管理</Name>
+    <Value >100</Value>
+  </Row>
+  <Row>
+    <Factory>3</Factory>
+    <Name>市场部</Name>
+    <Value >1</Value>
+  </Row>
+  <Row>
+    <Factory>3</Factory>
+    <Name>品质部</Name>
+    <Value >2</Value>
+  </Row>
+  <Row>
+    <Factory>3</Factory>
+    <Name>制造部</Name>
+    <Value >3</Value>
+  </Row>
+  <Row>
+    <Factory>3</Factory>
+    <Name>工艺工程部</Name>
+    <Value >4</Value>
+  </Row>
+  <Row>
+    <Factory>3</Factory>
+    <Name>采购部</Name>
+    <Value >5</Value>
+  </Row>
+  <Row>
+    <Factory>3</Factory>
+    <Name>物控部</Name>
+    <Value >6</Value>
+  </Row>
+  <Row>
+    <Factory>3</Factory>
+    <Name>设备部</Name>
+    <Value >7</Value>
+  </Row>
+  <Row>
+    <Factory>3</Factory>
+    <Name>行政人事部</Name>
+    <Value >8</Value>
+  </Row>
+  <Row>
+    <Factory>3</Factory>
+    <Name>财务部</Name>
+    <Value >9</Value>
+  </Row>
+  <Row>
+    <Factory>3</Factory>
+    <Name>总经办</Name>
+    <Value >10</Value>
+  </Row>
+  <Row>
+    <Factory>3</Factory>
+    <Name>生产计划</Name>
+    <Value >12</Value>
+  </Row>
+  <Row>
+    <Factory>3</Factory>
+    <Name>单据查询</Name>
+    <Value >11</Value>
+  </Row>
+  <!-- 越亚 End -->
+
+  <!-- 杭州 Start -->
+  <Row>
+    <Factory>4</Factory>
+    <Name>采购</Name>
+    <Value >1</Value>
+  </Row>
+  <Row>
+    <Factory>4</Factory>
+    <Name>销售</Name>
+    <Value >2</Value>
+  </Row>
+  <Row>
+    <Factory>4</Factory>
+    <Name>生计</Name>
+    <Value >3</Value>
+  </Row>
+  <Row>
+    <Factory>4</Factory>
+    <Name>物控</Name>
+    <Value >4</Value>
+  </Row>
+  <Row>
+    <Factory>4</Factory>
+    <Name>品保</Name>
+    <Value >5</Value>
+  </Row>
+  <Row>
+    <Factory>4</Factory>
+    <Name>技术</Name>
+    <Value >6</Value>
+  </Row>
+  <Row>
+    <Factory>4</Factory>
+    <Name>财务</Name>
+    <Value >7</Value>
+  </Row>
+  <Row>
+    <Factory>4</Factory>
+    <Name>产品</Name>
+    <Value >8</Value>
+  </Row>
+  <Row>
+    <Factory>4</Factory>
+    <Name>制造</Name>
+    <Value >9</Value>
+  </Row>
+  <!-- 杭州 End -->
+
+
+
+  <!-- 重庆 Start -->
+  <Row>
+    <Factory>5</Factory>
+    <Name>采购</Name>
+    <Value >1</Value>
+  </Row>
+  <Row>
+    <Factory>5</Factory>
+    <Name>销售</Name>
+    <Value >2</Value>
+  </Row>
+  <!-- 重庆 End -->
+
+
+
+
+  <!-- 快板厂 Start -->
+  <Row>
+    <Factory>6</Factory>
+    <Name>采购</Name>
+    <Value >1</Value>
+  </Row>
+  <Row>
+    <Factory>6</Factory>
+    <Name>财务</Name>
+    <Value >2</Value>
+  </Row>
+  <Row>
+    <Factory>6</Factory>
+    <Name>市场</Name>
+    <Value >3</Value>
+  </Row>
+  <Row>
+    <Factory>6</Factory>
+    <Name>物控</Name>
+    <Value >4</Value>
+  </Row>
+  <Row>
+    <Factory>6</Factory>
+    <Name>计划</Name>
+    <Value >5</Value>
+  </Row>
+  <Row>
+    <Factory>6</Factory>
+    <Name>制造</Name>
+    <Value >6</Value>
+  </Row>
+  <Row>
+    <Factory>6</Factory>
+    <Name>设备</Name>
+    <Value >7</Value>
+  </Row>
+  <Row>
+    <Factory>6</Factory>
+    <Name>产品</Name>
+    <Value >8</Value>
+  </Row>
+  <Row>
+    <Factory>6</Factory>
+    <Name>品质</Name>
+    <Value >9</Value>
+  </Row>
+  <Row>
+    <Factory>6</Factory>
+    <Name>单据查询</Name>
+    <Value >10</Value>
+  </Row>
+  <!-- 快板厂 End -->
+
+  <!--中央平台 Start-->
+  <Row>
+    <Factory>98</Factory>
+    <Name>公用</Name>
+    <Value>1</Value>
+  </Row>
+  <!--中央平台 End-->
+
+  <!-- 测试区 Start -->
+  
+  <Row>
+    <Factory>99</Factory>
+    <Name>市场部</Name>
+    <Value >1</Value>
+  </Row>
+  <Row>
+    <Factory>99</Factory>
+    <Name>品质部</Name>
+    <Value >2</Value>
+  </Row>
+  <Row>
+    <Factory>99</Factory>
+    <Name>制造部</Name>
+    <Value >3</Value>
+  </Row>
+  <Row>
+    <Factory>99</Factory>
+    <Name>工艺工程部</Name>
+    <Value >4</Value>
+  </Row>
+  <Row>
+    <Factory>99</Factory>
+    <Name>采购部</Name>
+    <Value >5</Value>
+  </Row>
+  <Row>
+    <Factory>99</Factory>
+    <Name>物控部</Name>
+    <Value >6</Value>
+  </Row>
+  <Row>
+    <Factory>99</Factory>
+    <Name>设备部</Name>
+    <Value >7</Value>
+  </Row>
+  <Row>
+    <Factory>99</Factory>
+    <Name>行政人事部</Name>
+    <Value >8</Value>
+  </Row>
+  <Row>
+    <Factory>99</Factory>
+    <Name>财务部</Name>
+    <Value >9</Value>
+  </Row>
+  <Row>
+    <Factory>99</Factory>
+    <Name>总经办</Name>
+    <Value >10</Value>
+  </Row>
+  <!-- 测试区 End -->
+
+  <!-- 公共区 Start-->
+  <Row>
+    <Factory>0</Factory>
+    <Name>PCB运营管理部</Name>
+    <Value >100</Value>
+  </Row>
+  <!-- 公共区 End-->
+
+</ERPReportDepartment>

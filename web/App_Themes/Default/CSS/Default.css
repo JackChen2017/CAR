@@ -1,0 +1,140 @@
+/* Global */
+body {
+	    margin-top: 0px;
+	    margin-bottom: 0px;
+}
+
+body, table, input, select, textarea, .maintable, .button, .altbg1, .altbg2 {
+font: 9pt Arial, Tahoma, Verdana;
+}
+
+
+
+.unnamed1 {
+	font-family: "方正黑体简体";
+	font-size: 11pt;
+	font-weight: bold;
+	color: #E50001;
+	text-decoration: none;
+}
+.table{border-collapse:collapse;}
+.text {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 9pt;
+	font-style: normal;
+	color: #000000;
+	text-decoration: none;
+	text-indent: 20pt;
+	white-space: normal;
+	line-height: 14pt;
+}
+.whitetitle {
+	font-family: "方正黑体简体";
+	font-size: 12pt;
+	font-weight: bold;
+	color: #000000;
+	text-decoration: none;
+	text-indent: 10pt;
+}
+.text1 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 9pt;
+	line-height: 130%;
+	color: #000000;
+	text-decoration: none;
+}
+.barlink {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 9pt;
+	font-style: normal;
+	color: #000000;
+	text-decoration: none;
+	height: 21px;
+	width: 160px;
+}
+.text_w {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 9pt;
+	line-height: 12pt;
+	color: #000000;
+	text-decoration: none;
+}
+.bluetitle {
+	font-family: "方正黑体简体";
+	font-size: 11pt;
+	color: #003399;
+	text-decoration: none;
+}
+.barbar {
+	font-family: "方正黑体简体";
+	font-size: 14pt;
+	font-weight: bold;
+	color: #FF9933;
+}
+.barbar1 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12pt;
+	font-weight: bold;
+	color: #000000;
+	text-decoration: none;
+}
+
+.titleleft{
+	color:#ffffff;
+	background-image: url(../../../IMAGES/column_bg.gif);
+	padding-left: 30px;
+	font-size: 14px;
+}
+.news_title{
+	color:#CC0000;
+	background-image: url(../../../IMAGES/newstitle.gif);
+	padding-left: 28px;
+	height:32px;
+	width:680px;
+	font-size: 14px;
+	font-weight: bolder;
+	text-align:center;
+}
+.newstext{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 9pt;
+	line-height: 200%;
+	color: #000000;
+	text-decoration: none;
+	padding:5px;
+}
+.newstime{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 9pt;
+	color: #999999;
+	text-decoration: none;
+}
+a:link {
+	COLOR: #2150A8;TEXT-DECORATION: none
+}
+a:active {
+	COLOR: #2150A8;TEXT-DECORATION: none
+}
+a:visited {
+	COLOR: #2150A8;TEXT-DECORATION: none
+}
+a:hover {
+	COLOR: #CC0000;TEXT-DECORATION: none
+}
+
+
+.nav {
+	FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: #ffffff
+}
+.nav A:link {
+	COLOR: #ffffff; TEXT-DECORATION: none
+}
+.nav A:active {
+	COLOR: #a3b5d3; TEXT-DECORATION: none
+}
+.nav A:visited {
+	COLOR: #ffffff; TEXT-DECORATION: none
+}
+.nav A:hover {
+	COLOR: #a3b5d3; TEXT-DECORATION: none
+}

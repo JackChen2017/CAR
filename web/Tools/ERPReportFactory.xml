@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ERPReportFactory>
+  <Row>
+    <Name>富山</Name>
+    <Value>1</Value>
+  </Row>
+  <Row>
+    <Name>多层</Name>
+    <Value>2</Value>
+  </Row>
+  <Row>
+    <Name>越亚</Name>
+    <Value>3</Value>
+  </Row>
+  <Row>
+    <Name>杭州</Name>
+    <Value>4</Value>
+  </Row>
+  <Row>
+    <Name>重庆</Name>
+    <Value>5</Value>
+  </Row>
+  <Row>
+    <Name>快板厂</Name>
+    <Value>6</Value>
+  </Row>
+  <Row>
+    <Name>事业部</Name>
+    <Value>98</Value>
+  </Row>
+  <!--<Row>
+    <Name>测试区</Name>
+    <Value>99</Value>
+  </Row>-->
+</ERPReportFactory>

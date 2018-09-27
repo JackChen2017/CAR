@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- 发启单位内部审批流程配置文件 -->
+<!-- 每一个LIST代表一个公司的配置文件，list+ID ，ID的顺序与属性和Webconfig里的数据库连接串ID的顺序与属性意义一致 -->
+<configuration>
+	
+	<list1>
+		<!-- start 总步骤数，个数必须与stepuser个数相同 -->
+		<totalstep index="2" />		
+		<!-- end 总步骤数 -->
+		
+		<!-- start 每一步审批人员 -->
+		<stepuser1 index="founderpcb\yangwm" />
+		<stepuser2 index="founderpcb\yangwm" />
+		<!-- end 每一步审批人员 -->
+		
+		<!-- start 审批通过，通知人员列表 -->
+		<succeed index="founderpcb\yangwm" />
+		<!-- end 审批通过 -->
+		
+		<!-- start 审批未通过，通知人员列表 -->
+		<failed index="founderpcb\yangwm" />
+		<!-- end 审批未通过 -->
+	</list1>
+
+	<list2>
+		<totalstep index="4" />
+		<stepuser1 index="founderpcb\fangxh" />
+		<stepuser2 index="founderpcb\bicheng1" />
+		<stepuser3 index="founderpcb\chench1" />
+		<stepuser4 index="founderpcb\daigr" />
+		<succeed index="founderpcb\fangxh,founderpcb\bicheng1,founderpcb\liangjinfeng,founderpcb\xiaojuan,founderpcb\yangmf,founderpcb\daigr,founderpcb\xiaoad,founderpcb\lijianping,founderpcb\guozf,founderpcb\zhouying,founderpcb\sunyongqiang,founderpcb\hexiaoying,founderpcb\lvxiangjun,founderpcb\chench1,founderpcb\zhangchangyong,founderpcb\dudengwei,founderpcb\keyonghong,founderpcb\xiezj,founderpcb\zhonglihong,founderpcb\hanjc,founderpcb\lixsh,founderpcb\chaoxd,founderpcb\yangwm" />
+		<failed index="founderpcb\bicheng1,founderpcb\liangjinfeng,founderpcb\daigr,founderpcb\xiaoad,founderpcb\sunyongqiang,founderpcb\chench1,founderpcb\yangwm" />
+	</list2>
+
+	<list3>
+		<totalstep index="2" />
+		<stepuser1 index="founderpcb\lixsh" />
+		<stepuser2 index="founderpcb\chaoxd" />
+		<succeed index="founderpcb\lixsh,founderpcb\chaoxd,founderpcb\yangwm" />
+		<failed index="founderpcb\lixsh,founderpcb\chaoxd,founderpcb\yangwm" />
+	</list3>
+
+	<list4>
+		<totalstep index="2" />
+		<stepuser1 index="founderpcb\lixsh" />
+		<stepuser2 index="founderpcb\chaoxd" />
+		<succeed index="founderpcb\lixsh,founderpcb\chaoxd,founderpcb\yangwm" />
+		<failed index="founderpcb\lixsh,founderpcb\chaoxd,founderpcb\yangwm" />
+	</list4>
+
+	<list5>
+		<totalstep index="2" />
+		<stepuser1 index="founderpcb\lixsh" />
+		<stepuser2 index="founderpcb\chaoxd" />
+		<succeed index="founderpcb\lixsh,founderpcb\chaoxd,founderpcb\yangwm" />
+		<failed index="founderpcb\lixsh,founderpcb\chaoxd,founderpcb\yangwm" />
+	</list5>
+
+	<list6>
+		<totalstep index="4" />
+		<stepuser1 index="founderpcb\bicheng1" />
+		<stepuser2 index="founderpcb\fangxh" />
+		<stepuser3 index="founderpcb\daigr" />
+		<stepuser4 index="founderpcb\chench1" />
+		<succeed index="founderpcb\fangxh,founderpcb\bicheng1,founderpcb\liangjinfeng,founderpcb\xiaojuan,founderpcb\yangmf,founderpcb\daigr,founderpcb\xiaoad,founderpcb\lijianping,founderpcb\guozf,founderpcb\zhouying,founderpcb\sunyongqiang,founderpcb\hexiaoying,founderpcb\lvxiangjun,founderpcb\chench1,founderpcb\zhangchangyong,founderpcb\dudengwei,founderpcb\keyonghong,founderpcb\xiezj,founderpcb\zhonglihong,founderpcb\hanjc,founderpcb\lixsh,founderpcb\chaoxd,founderpcb\yangwm" />
+		<failed index="founderpcb\bicheng1,founderpcb\liangjinfeng,founderpcb\daigr,founderpcb\xiaoad,founderpcb\sunyongqiang,founderpcb\chench1,founderpcb\yangwm" />
+	</list6>
+
+</configuration>
