@@ -93,60 +93,60 @@ public partial class HSF_Show : FounderTecInfoSys.Common.PageBase.DomainMasterPa
 
     protected void Page_Load(object sender, EventArgs e)
     {
-        if (!IsPostBack)
-        {
-            FactoryID = String.IsNullOrEmpty(Request.QueryString["FID"]) ? 98 : int.Parse(Request.QueryString["FID"]);
-            did = String.IsNullOrEmpty(Request.QueryString["did"]) ? 0 : int.Parse(Request.QueryString["did"]);
-            type = String.IsNullOrEmpty(Request.QueryString["type"]) ? "view" : Request.QueryString["type"];
-            try
-            {
-                this.UserAD = CurrentUser.UserADAcount;
-            }
-            catch
-            {
-                Page.ClientScript.RegisterStartupScript(this.GetType(), "alert", "<script>alert('用户AD丢失！');</script>");
-                Response.End();
-            }
-            CARDataBLL dataBll = new CARDataBLL(FactoryID);
-            dataInfo = dataBll.GetByKey(did);
-            if ((int)dataInfo.op_type != 2)
-            {
-                Page.ClientScript.RegisterStartupScript(this.GetType(), "alert", "<script>alert('非法访问！');</script>");
-                Response.End();
-            }
-            if (type == "view")
-            {
-                if (!HasRight(XmlSource.GetRightIndex("VIEW")) || !HasRight(XmlSource.GetRightIndex("HSF")))
-                {
-                    Page.ClientScript.RegisterStartupScript(this.GetType(), "alert", "<script>alert('您没有查看此页面的权限！');</script>");
-                    Response.End();
-                }
-                div_sp.Visible = false;
-                Info_Content.AutoConfigure = CuteEditor.AutoConfigure.None;
-                Info_Content.ActiveTab = CuteEditor.TabType.View;
-                Info_Content.ShowBottomBar = false;
-                Interim_Action.AutoConfigure = CuteEditor.AutoConfigure.None;
-                Interim_Action.ActiveTab = CuteEditor.TabType.View;
-                Interim_Action.ShowBottomBar = false;
-                IPCA.AutoConfigure = CuteEditor.AutoConfigure.None;
-                IPCA.ActiveTab = CuteEditor.TabType.View;
-                IPCA.ShowBottomBar = false;
-                CONF_Content.AutoConfigure = CuteEditor.AutoConfigure.None;
-                CONF_Content.ActiveTab = CuteEditor.TabType.View;
-                CONF_Content.ShowBottomBar = false;
-                InitPage(dataInfo);
-            }
-            else if (type == "approval")
-            {
-                if (dataInfo.status == 0 || dataInfo.status == 1 || dataInfo.status == 14)
-                {
-                    Page.ClientScript.RegisterStartupScript(this.GetType(), "alert", "<script>alert('此单未在审批中！');</script>");
-                    Response.End();
-                }
-                Check();
-                InitPage(dataInfo);
-            }
-        }
+        //if (!IsPostBack)
+        //{
+        //    FactoryID = String.IsNullOrEmpty(Request.QueryString["FID"]) ? 98 : int.Parse(Request.QueryString["FID"]);
+        //    did = String.IsNullOrEmpty(Request.QueryString["did"]) ? 0 : int.Parse(Request.QueryString["did"]);
+        //    type = String.IsNullOrEmpty(Request.QueryString["type"]) ? "view" : Request.QueryString["type"];
+        //    try
+        //    {
+        //        this.UserAD = CurrentUser.UserADAcount;
+        //    }
+        //    catch
+        //    {
+        //        Page.ClientScript.RegisterStartupScript(this.GetType(), "alert", "<script>alert('用户AD丢失！');</script>");
+        //        Response.End();
+        //    }
+        //    CARDataBLL dataBll = new CARDataBLL(FactoryID);
+        //    dataInfo = dataBll.GetByKey(did);
+        //    if ((int)dataInfo.op_type != 2)
+        //    {
+        //        Page.ClientScript.RegisterStartupScript(this.GetType(), "alert", "<script>alert('非法访问！');</script>");
+        //        Response.End();
+        //    }
+        //    if (type == "view")
+        //    {
+        //        if (!HasRight(XmlSource.GetRightIndex("VIEW")) || !HasRight(XmlSource.GetRightIndex("HSF")))
+        //        {
+        //            Page.ClientScript.RegisterStartupScript(this.GetType(), "alert", "<script>alert('您没有查看此页面的权限！');</script>");
+        //            Response.End();
+        //        }
+        //        div_sp.Visible = false;
+        //        Info_Content.AutoConfigure = CuteEditor.AutoConfigure.None;
+        //        Info_Content.ActiveTab = CuteEditor.TabType.View;
+        //        Info_Content.ShowBottomBar = false;
+        //        Interim_Action.AutoConfigure = CuteEditor.AutoConfigure.None;
+        //        Interim_Action.ActiveTab = CuteEditor.TabType.View;
+        //        Interim_Action.ShowBottomBar = false;
+        //        IPCA.AutoConfigure = CuteEditor.AutoConfigure.None;
+        //        IPCA.ActiveTab = CuteEditor.TabType.View;
+        //        IPCA.ShowBottomBar = false;
+        //        CONF_Content.AutoConfigure = CuteEditor.AutoConfigure.None;
+        //        CONF_Content.ActiveTab = CuteEditor.TabType.View;
+        //        CONF_Content.ShowBottomBar = false;
+        //        InitPage(dataInfo);
+        //    }
+        //    else if (type == "approval")
+        //    {
+        //        if (dataInfo.status == 0 || dataInfo.status == 1 || dataInfo.status == 14)
+        //        {
+        //            Page.ClientScript.RegisterStartupScript(this.GetType(), "alert", "<script>alert('此单未在审批中！');</script>");
+        //            Response.End();
+        //        }
+        //        Check();
+        //        InitPage(dataInfo);
+        //    }
+        //}
     }
     #region 初始化发出单位异常单位列表
     /// <summary>
